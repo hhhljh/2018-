@@ -1,0 +1,37 @@
+/* tag Setting */
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+body{font-family:arial,"Malgun Gothic","MalgunGothic";font-size:15px;}
+a{text-decoration:none;color:inherit;transition:.3s;}
+img{border:none;}
+input,select,img,textarea{vertical-align:middle;}
+i{vertical-align:middle;}
+
+/* layout */
+#header{position:fixed;right:0;top:0;bottom:0;overflow:hidden;}
+#header>div{height:100%;margin-right:-190px;background:#fff;width:200px;padding:20px;border-left:1px solid #ddd;}
+.menu{color:#666;margin-bottom:20px;display:block;font-size:20px;color:#09F;}
+.close{font-size:20px;position:absolute;left:200px;top:20px;color:#09F;}
+.gnb{padding-left:30px;}
+.gnb h3{color:#09F;font-size:17px;}
+.gnb ul{margin-top:20px;}
+.gnb li a{display:block;line-height:200%;padding:0 10px;}
+.gnb li a:hover{background:#09f;color:#FFF;}
+
+#footer{padding:40px 0;background:#666;color:#fff;text-align:center;position:relative;z-index:20;}
+.content_wrap{min-height:500px;}
+.content_title{border-bottom:1px solid #ddd;padding-bottom:20px;margin-bottom:20px;color:#228ae6;}
+.wrap{margin:0 auto;width:1200px;}
+.content{min-height:400px;}
+
+/* content default */
+.home,
+.price{background:#fafafa;padding:50px 0;border-bottom:1px dotted #ddd;}
+.gallery,
+.contact{padding:30px;}
+
+/* gallery */
+.gallery ul:after{content:"";display:block;clear:both;}
+.gallery li{background:no-repeat center / cover;width:25%;padding-top:25%;float:left;cursor:pointer;position:relative;}
+.gallery li:before{content:"크게 보기";background:rgba(0,0,0,.5);color:#fff;position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;font-size:30px;transition:.3s;opacity:0;}
+.gallery li:hover:before{opacity:1;}

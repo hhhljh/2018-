@@ -1,0 +1,127 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: #fff;}
+body { background: #eef; }
+input[type='radio'], button { outline: none; }
+.i1 { font-size:10px; }
+.i2 { font-size:20px; }
+.i3 { font-size:30px; }
+.i4 { font-size:40px; }
+.i5 { font-size:50px; }
+.i6 { font-size:60px; }
+.i7 { font-size:70px; }
+.i8 { font-size:80px; }
+
+.button { border:none; border-radius: 5px; text-align: center; display: block; font-size: 15px; color: #fff; box-shadow: 2px 2px 2px #666; }
+.default { background: #666; border-bottom: 2px solid #333; }
+.default:hover { background: #333; border-bottom: 2px solid #666; }
+.yellow { background: #ed0; border-bottom: 2px solid #b90; }
+.yellow:hover { background: #b90; border-bottom: 2px solid #ed0; }
+.brown { background: #c70; border-bottom: 2px solid #850; }
+.brown:hover { background: #850; border-bottom: 2px solid #c70; }
+.green { background: #2a0; border-bottom: 2px solid #080; }
+.green:hover { background: #080; border-bottom: 2px solid #2a0; }
+.blue { background: #47d; border-bottom: 2px solid #15a; }
+.blue:hover { background: #15a; border-bottom: 2px solid #47d; }
+.red { background: #c44; border-bottom: 2px solid #c00; }
+.red:hover { background: #c00; border-bottom: 2px solid #c44; }
+
+#color1:checked ~ div .default { background: #666; border-bottom: 2px solid #333; }
+#color1:checked ~ div .default:hover { background: #333; border-bottom: 2px solid #666; }
+#color2:checked ~ div .default { background: #ed0; border-bottom: 2px solid #b90; }
+#color2:checked ~ div .default:hover { background: #b90; border-bottom: 2px solid #ed0; }
+#color3:checked ~ div .default { background: #c70; border-bottom: 2px solid #850; }
+#color3:checked ~ div .default:hover { background: #850; border-bottom: 2px solid #c70; }
+#color4:checked ~ div .default { background: #2a0; border-bottom: 2px solid #080; }
+#color4:checked ~ div .default:hover { background: #080; border-bottom: 2px solid #2a0; }
+#color5:checked ~ div .default { background: #47d; border-bottom: 2px solid #15a; }
+#color5:checked ~ div .default:hover { background: #15a; border-bottom: 2px solid #47d; }
+#color6:checked ~ div .default { background: #c44; border-bottom: 2px solid #c00; }
+#color6:checked ~ div .default:hover { background: #c00; border-bottom: 2px solid #c44; }
+
+.big { width: 160px ; height: 42px; }
+a.big { width: 160px ; height: 40px;line-height: 40px; }
+.normal { width: 132px; height: 42px; }
+a.normal { width: 132px; height: 40px;line-height: 40px; }
+.small { width: 90px; height: 32px; }
+a.small { width: 90px; height: 30px;line-height: 30px; }
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(720deg); }
+}
+
+.flip { transform: rotateX(180deg) }
+.spin { animation: spin 4s infinite linear }
+.hspin:not(.button):hover { animation: spin 4s infinite linear }
+.overlap {display: block; position: relative; width: 30px; height: 30px;}
+.overlap i {position: absolute; text-align: center; line-height: 30px; width: 40px; height: 40px; }
+
+.table1 thead { background: #faf; }
+.table1 tbody tr:nth-child(odd) { background: #eee; }
+.table1 tbody tr { background: #fff; }
+.table1 tbody tr td { background: #fff; border-bottom: 1px solid #000; }
+.table1 tfoot { background: #d9d; }
+.table2 thead { background: #ffa; }
+.table2 tbody tr:nth-child(even) { background: #eee; }
+.table2 tbody tr { background: #fff; }
+.table2 tbody tr td { background: #fff; border-bottom: 1px solid #000; }
+.table2 tfoot { background: #dd9; }
+.table3 thead { background: #aff; }
+.table3 tbody tr:nth-child(odd) { background: #eee; }
+.table3 tbody tr { background: #fff; }
+.table3 tbody tr td { background: #fff; border-bottom: 1px solid #000; }
+.table3 tfoot { background: #9dd; }
+
+header { background: #5ae; position: fixed; width: 250px; height: 100%; }
+header .logo { margin: 15px 20px; }
+header .menu { margin-top: 20px; }
+header .menu div { border-bottom:1px solid #fff; height: 30px; line-height: 30px; }
+header .menu div a span:first-child { margin-left: 20px; }
+header .menu div a span:last-child { float: right; margin-right: 20px; }
+section { position: absolute; left: 250px; margin: 50px 0 50px 50px; width: 75%; }
+section > p { color: #666; font-size: 30px; }
+.underline { width: 48px; height: 2px; background: #666; margin: 20px 0; }
+.title { border-left: 3px solid #5ae; color: #5ae; padding-left: 10px; margin-top: 20px; margin-bottom: 10px; }
+caption { text-align: left; border-left: 3px solid #5ae; color: #5ae; padding-left: 10px; margin-top: 20px; margin-bottom: 10px; }
+footer { position: fixed; bottom: 0; width: 100%; background: #666; text-align: center; color: #fff; line-height: 30px; height: 30px; }
+
+/* index1 */
+.wrap { display: flex; justify-content: space-between; }
+.n { width: 852px; }
+.b { width: 520px; height: 104px; flex-wrap: wrap; }
+.s { width: 600px; }
+
+/* index2 */
+.ind2 ~ section .content .wrap { display: flex; width: 75%; justify-content: space-around; }
+.ind2 ~ section .content .left { width: 250px; height: 250px; text-align: center; }
+.ind2 ~ section .content .icon { line-height: 230px; }
+.ind2 ~ section .content .left p { background: #666; color: #fff; font-weight: bold; }
+.ind2 ~ section .content .left .class { color: #5ae; }
+.ind2 ~ section .content p { height: 20px; line-height: 20px; width: 100%; }
+.ind2 ~ section .content .size { display: flex; height: 80px; }
+.ind2 ~ section .content .size i { line-height: 80px; }
+.ind2 ~ section .content .transform { display: flex;width: 100%; justify-content: space-between; }
+.ind2 ~ section .content .transform div { text-align: center; }
+
+/* index3 */
+.ind3 ~ section .content .hov:hover i { animation: spin 4s infinite linear; }
+
+/* index4 */
+.ind4 ~ section .table1,
+.ind4 ~ section #table1 { display: none; }
+.ind4 ~ section #table1:checked ~ .table1 { display: block }
+.ind4 ~ section .table2,
+.ind4 ~ section #table2 { display: none; }
+.ind4 ~ section #table2:checked ~ .table2 { display: block }
+.ind4 ~ section .table3,
+.ind4 ~ section #table3 { display: none; }
+.ind4 ~ section #table3:checked ~ .table3 { display: block }
+.ind4 ~ section .tchanger { background: #5ae; border-radius: 5px; }
+.ind4 ~ section .tchanger:hover { background: #4be; }
+.ind4 ~ section .tchanger { background: #5ae; border-radius: 5px; }
+.ind4 ~ section .tchanger:hover { background: #4be; }
+.ind4 ~ section .tchanger { background: #5ae; border-radius: 5px; }
+.ind4 ~ section .tchanger:hover { background: #4be; }
+
+
+/* index5 */

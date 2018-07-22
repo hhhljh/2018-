@@ -1,0 +1,244 @@
+ 
+? 기본 사용법 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+?
+? span tag 
+사용법 : <i class="fa fa-camera-retro"></i> fa-camera-retro
+
+사용법 : <span class="fa fa-camera-retro"> span tag</span> fa-camera-retro
+  
+
+? Icon 크기 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+? fa-lg
+
+사용법 : <i class="fa fa-camera-retro fa-lg"></i> fa-camera-retro fa-lg
+  
+
+? fa-2x
+
+사용법 : <i class="fa fa-camera-retro fa-2x"></i> fa-camera-retro fa-2x
+  
+
+? fa-3x
+
+사용법 : <i class="fa fa-camera-retro fa-3x"></i> fa-camera-retro fa-3x
+  
+
+? fa-4x
+
+사용법 : <i class="fa fa-camera-retro fa-4x"></i> fa-camera-retro fa-4x
+  
+
+? fa-5x
+
+사용법 : <i class="fa fa-camera-retro fa-5x"></i> fa-camera-retro fa-5x
+  
+
+? fa-6x
+
+사용법 : <i class="fa fa-camera-retro fa-6x"></i> fa-camera-retro fa-6x
+  
+
+? fa-7x
+
+사용법 : <i class="fa fa-camera-retro fa-7x"></i> fa-camera-retro fa-7x
+  
+
+?fa-8x
+
+사용법 : <i class="fa fa-camera-retro fa-8x"></i> fa-camera-retro fa-8x
+  
+
+? UL에 사용 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+? 목록 1
+? 목록 2
+? 애니메이션
+? 박스 아이콘
+ 사용법 : 
+<ul class="fa-ul">
+	<li><i class="fa-li fa fa-check-square"></i> 목록 1</li>
+	<li><i class="fa-li fa fa-check-square"></i> 목록 2</li>
+	<li><i class="fa-li fa fa-spinner fa-spin"></i> 애니메이션</li>
+	<li><i class="fa-li fa fa-quote-left fa-border"></i> 박스 아이콘</li>
+</ul>
+  
+
+? 박스 및 문자사용 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+? 
+사용법 : <i class="fa fa-quote-left fa-5x fa-border"></i>
+  
+
+? 문자열과 조하롭게 연결 되는지를 테스트 합니다. 나는 나는 왜 이렇게 타이핑을 하는가? 
+사용법 : <i class="fa fa-quote-left fa-3x pull-left fa-border"></i> 문자열과 조하롭게 연결 되는지를 테스트 합니다. 나는 나는 왜 이렇게 타이핑을 하는가? 
+  
+
+? 애니메이션 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+? 
+사용법 : <i class="fa fa-spinner fa-5x fa-spin"></i>
+  
+
+? 
+사용법 : <i class="fa fa-circle-o-notch fa-4x fa-spin"></i>
+  
+
+? 
+사용법 : <i class="fa fa-refresh fa-3x fa-spin"></i>
+  
+
+? 
+사용법 : <i class="fa fa-cog fa-2x fa-spin"></i>
+  
+
+? 
+사용법 : <i class="fa fa-spinner fa-lg fa-spin"></i>
+  
+
+? 회전 / 대칭 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+? 
+사용법 : <i class="fa fa-shield fa-2x"></i>
+  
+
+? fa-rotate-90 
+사용법 : <i class="fa fa-shield fa-2x fa-rotate-90"></i> fa-rotate-90
+  
+
+? fa-fa-rotate-180 
+사용법 : <i class="fa fa-shield fa-2x fa-rotate-180"></i> fa-fa-rotate-180
+  
+
+? fa-rotate-90 
+사용법 : <i class="fa fa-shield fa-2x fa-rotate-270"></i> fa-rotate-270
+  
+
+? fa-flip-horizontal 
+사용법 : <i class="fa fa-shield fa-2x fa-flip-horizontal"></i> fa-flip-horizontal
+  
+
+? fa-flip-vertical 
+사용법 : <i class="fa fa-shield fa-2x fa-flip-vertical"></i> fa-flip-vertical
+  
+
+? 중첩 사용 
+
+
+
+
+
+
+미리보기
+
+사용법
+
+
+
+? ?  
+사용법 : 
+<span class="fa-stack fa-2x">
+	<i class="fa fa-square-o fa-stack-2x"></i>
+	<i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+  
+
+? ?  
+사용법 : 
+<span class="fa-stack fa-3x">
+	<i class="fa fa-circle fa-stack-2x"></i>
+	<i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+</span>
+  
+
+? ?  
+사용법 : 
+<span class="fa-stack fa-4x">
+	<i class="fa fa-square fa-stack-2x"></i>
+	<i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span>
+  
+
+? ?  
+사용법 : 
+<span class="fa-stack fa-4x">
+	<i class="fa fa-camera fa-stack-1x"></i>
+	<i class="fa fa-ban fa-stack-2x" style="color:#a94442;"></i>
+</span>
+
+
+
+
+
+
+
+
+
+

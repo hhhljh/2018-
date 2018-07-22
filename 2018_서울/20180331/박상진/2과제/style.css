@@ -1,0 +1,339 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: inherit;
+}
+footer {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	background-color: #4c4c4c;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+.nav {
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	background-color: #8bc5ff;
+	z-index: 10;
+}
+
+.logo {
+	margin-bottom: 20px;
+}
+.nav > div {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	transition: .5s all;
+}
+.nav > div:not(.logo):hover {
+	width: 120%;
+	background-color: #247bd0;
+	color: #fff;
+	cursor: pointer;
+}
+.nav a {
+	margin-top: 10px;
+}
+.nav p {
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	color: #8bc5ff;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.rap {
+	width: 100%;
+	height: auto;
+	position:absolute;
+	padding-left: 250px;
+}
+
+/*basic button*/
+.bcolor {background-color: #ccc;}
+.yellow {background-color: yellow;}
+.brown {background-color: brown;}
+.red {background-color: red;}
+.green {background-color: green;}
+.blue {background-color: blue;}
+
+.bcolor:hover {background-color: #7e8c8d;}
+.yellow:hover {background-color: #f59e00;}
+.brown:hover {background-color: #a87020;}
+.red:hover {background-color: #be3b26;}
+.green:hover {background-color: #08bc9a;}
+.blue:hover {background-color: #237fbc;}
+
+h1 {
+	margin-bottom: 100px;
+}
+.basicb > div{
+	margin-bottom: 100px;
+}
+.basicb > * {
+	margin-left: 100px;
+}
+.basicbutton {
+	display: flex;
+}
+.basicbutton > div {
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.basicb > div > *{
+	margin-left: 10px;
+	color: #fff;
+	transition: .3s all;
+	cursor: pointer;
+}
+
+/*small*/
+.smallbutton > button {
+	width: 80px;
+	height: 40px;
+}
+/*big*/
+.bigbutton > input {
+	width: 180px;
+	height: 70px;
+}
+
+/*icon*/
+.icon {
+	display: flex;
+	margin-left: 100px;
+	margin-bottom: 30px;
+	height: 300px;
+}
+
+.bigicon {
+	width: 200px;
+	height: 200px;
+	background-color: #ccc;
+	text-align: center;
+}
+.bigicon .bicon {
+	width: 200px;
+	height: 170px;
+	font-size: 80px;
+	line-height: 200px;
+}
+
+.iconbox {
+	width: 600px;
+	height: 200px;
+}
+.iconbox > div {
+	display: flex;
+	font-size: 50px;
+	width: 100%;
+	height:50%;
+}
+.iconbox > div > div{
+	width: 150px;
+	height: 90px;
+	text-align: center;
+	line-height: 100px;
+	color: #fff;
+	 margin-left: 10px;
+}
+
+.iconbox .first > div:nth-child(1){background-color: #fff; color: #000;}
+.iconbox .first > div:nth-child(2){background-color: #efece9;}
+.iconbox .first > div:nth-child(3){background-color: #575049;}
+.iconbox .first > div:nth-child(4){background-color: #292521;}
+.iconbox .second > div:nth-child(1){background-color: #a8cfff;}
+.iconbox .second > div:nth-child(2){background-color: #4da3ff;}
+.iconbox .second > div:nth-child(3){background-color: #1493fd;}
+.iconbox .second > div:nth-child(4){background-color: #0c9be8;}
+@keyframes spin{
+	0% {transform: rotate(0deg)}
+	100% {transform: rotate(360deg)}
+}
+.spin:hover i{
+	animation: spin 1s infinite linear;
+}
+
+.dae {
+	transform: rotate(180deg);
+}
+
+#basic:checked ~ .button_icon .color{background-color: #7e8c8d}
+#yellow:checked ~ .button_icon .color{background-color: yellow}
+#brown:checked ~ .button_icon .color{background-color: brown}
+#red:checked ~ .button_icon .color{background-color: red}
+#green:checked ~ .button_icon .color{background-color: green}
+#blue:checked ~ .button_icon .color{background-color: blue}
+.button_icon {
+	display: flex;
+	color: #fff;
+	margin-left: 100px;
+}
+.button_icon >*{
+	width: 130px;
+	height: 50px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 50px;
+	margin: 10px;
+	cursor: pointer;
+}
+@keyframes infi{
+ from 0% {transform: rotate(0deg);}
+ to 100% {transform: rotate(360deg);}
+}
+.button_icon button:hover ~ .button_icon i{
+	animation: infi 1s infinite linear;
+}
+/*테이블*/
+.table{
+	width: 1000px;
+}
+table {
+	margin-bottom: 100px;
+}
+.table1 thead {
+	background-color: #ccc;
+	text-align: center;
+}
+.table1 tbody {
+	background-color: #f5f5f5;
+	text-align: left;
+}
+.table1 tfoot {
+	background-color: #0099ff;
+	text-align: right;
+}
+.table2 thead {
+	background-color: #569ee6;
+	text-align: center;
+}
+.table2 tbody {
+	background-color: #eee3e3;
+	text-align: left;
+}
+.table2 tfoot {
+	background-color: #ff9090;
+	text-align: right;
+}
+.table3 thead {
+	background-color: #569ee6;
+	text-align: center;
+}
+.table3 tbody {
+	background-color: skyblue;
+	text-align: left;
+}
+.table3 tfoot {
+	background-color: #ccc;
+	text-align: right;
+}
+/*board*/
+.board {
+	width: 800px;
+	margin-left: 100px;
+}
+.list {
+	margin-bottom: 50px;
+}
+.thead {
+	display: flex;
+	background-color: #0099ff;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+}
+.tbody {
+	display: flex;
+	background-color: #f5f5f5;
+	height: 50px;
+	line-height: 50px;
+}
+.tbody > div:nth-child(1){width: 10%;}
+.tbody > div:nth-child(2){width: 30%;}
+.tbody > div:nth-child(3){width: 20%;}
+.tbody > div:nth-child(4){width: 20%;}
+.tbody > div:nth-child(5){width: 20%;}
+
+.thead > div:nth-child(1){width: 10%;}
+.thead > div:nth-child(2){width: 30%;}
+.thead > div:nth-child(3){width: 20%;}
+.thead > div:nth-child(4){width: 20%;}
+.thead > div:nth-child(5){width: 20%;}
+
+.board {
+	height: 1300px;
+}
+.view > div:not(.viewlist) {
+	width: 800px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #0099ff;
+	text-align: center;
+	border-bottom: 1px solid #fff; 
+}
+.view > .footbtn {
+	display: flex;
+	margin-top: 10px;
+}
+.view > .footbtn > p,button {
+	width: 80px;
+	height: 50px;
+	background-color: #ccc;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.view > div > div{
+	display: flex;
+	color: #fff;
+	width: 800px;
+}
+.view > div > div >p{
+	width: 100px;
+}
+.view .text {
+	width: 100%;
+	background-color: #ccc;
+}
+.viewlist {
+	width: 800px;
+	height: 600px;
+	border: 1px solid #000;
+}
+
+.right {
+	margin-left: 250px;
+}
+
+.board2 .thead {
+	background-color: #247bd0;
+}
+.board2 .tbody {
+	background-color: #fff;
+}
+
+.view > .footbtn > p,button {
+	background-color: #3a4d59;
+	color: #fff;
+}
+.board2 .view .text {
+	color: #000;
+	background-color: #f5f5f5;
+}

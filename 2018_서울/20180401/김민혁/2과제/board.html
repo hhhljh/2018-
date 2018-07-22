@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>기본 버튼</title>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/fontawesome-all.min.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo"><a href="./index.html"><img src="./img/logo.png" alt="logo"></a></div>
+			<ul>
+				<li><a href="./index.html"><i class="fa fa-reply"></i> 기본버튼<span class="fr">&#10095;</span></a></li>
+				<li><a href="./icon.html"><i class="fa fa-reply"></i> 아이콘<span class="fr">&#10095;</span></a></li>
+				<li><a href="./bicon.html"><i class="fa fa-reply"></i> 버튼+아이콘<span class="fr">&#10095;</span></a></li>
+				<li><a href="./table.html"><i class="fa fa-reply"></i> 테이블<span class="fr">&#10095;</span></a></li>
+				<li><a href="./board.html"><i class="fa fa-reply"></i> 게시판<span class="fr">&#10095;</span></a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section id="bicon">
+		<h2 class="title">게시판</h2>
+
+		<input type="radio" name="type" id="type1" checked><label for="type1">게시판 타입1</label>
+		<input type="radio" name="type" id="type2"><label for="type2">게시판 타입2</label>
+
+		<div class="table-wrap">
+			
+			<table class="table type1">
+				<colgroup>
+					<col colspan="2">
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>결과</td>
+						<td>결과</td>
+						<td>결과</td>
+						<td>결과</td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<table class="table type2">
+				<colgroup>
+					<col colspan="2">
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+						<td>내용</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>결과</td>
+						<td>결과</td>
+						<td>결과</td>
+						<td>결과</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<input type="radio" name="view" id="view1" checked><label for="view1">보기 타입1</label>
+		<input type="radio" name="view" id="view2"><label for="view2">보기 타입2</label>
+
+		<div class="view-wrap">
+
+			<div class="view view1">
+				<div class="brown"><a href="#!" class="btn normal default">글쓴이</a></div>
+				<div class="brown"><a href="#!" class="btn normal default">제목</a></div>
+				<textarea class="yellow">내용</textarea>
+				<div>
+					<div>
+						<a href="#!" class="btn normal default"><i class="fa fa-reply"></i>이전글</a>
+						<a href="#!" class="btn normal green"><i class="fa fa-reply"></i>다음글</a>
+					</div>
+					<div>
+						<a href="#!" class="btn normal blue"><i class="fa fa-history"></i> 글목록</a>
+						<a href="#!" class="btn normal blue"><i class="fa fa-history"></i> 글작성</a>
+						<a href="#!" class="btn normal red"><i class="fa fa-history"></i> 글수정</a>
+						<a href="#!" class="btn normal red"><i class="fa fa-adjust"></i> 글삭제</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="view view2">
+				<div class="default"><a href="#!" class="btn normal yellow">글쓴이</a></div>
+				<div class="default"><a href="#!" class="btn normal yellow">제목</a></div>
+				<textarea class="brown">내용</textarea>
+				<div>
+					<div>
+						<a href="#!" class="btn normal blue"><i class="fa fa-reply"></i>이전글</a>
+						<a href="#!" class="btn normal green"><i class="fa fa-reply"></i>다음글</a>
+					</div>
+					<div>
+						<a href="#!" class="btn normal default"><i class="fa fa-history"></i> 글목록</a>
+						<a href="#!" class="btn normal blue"><i class="fa fa-history"></i> 글작성</a>
+						<a href="#!" class="btn normal default"><i class="fa fa-history"></i> 글수정</a>
+						<a href="#!" class="btn normal red"><i class="fa fa-adjust"></i> 글삭제</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+	</section>
+
+	<footer>Copyright &copy; 2018 Webskills All rights reserved.</footer>
+
+</body>
+</html>

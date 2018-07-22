@@ -1,0 +1,77 @@
+/* tag Setting */
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+body{font-family:arial,"Malgun Gothic","MalgunGothic";font-size:15px;}
+a{text-decoration:none;color:inherit;transition:.3s;}
+img{border:none;}
+input,select,img,textarea{vertical-align:middle;font-family:inherit;}
+i{vertical-align:middle;}
+fieldset{border:none;}
+label{cursor:pointer;}
+
+/* layout */
+#header{position:fixed;right:0;top:0;bottom:0;overflow:hidden;}
+.header-content{height:100%;margin-right:-190px;background:#fff;width:200px;padding:20px;border-left:1px solid #ddd;}
+.header-content .close{font-size:20px;position:absolute;left:200px;top:20px;color:#09F;}
+.menu{color:#666;margin-bottom:20px;display:block;font-size:20px;color:#09F;}
+.gnb{padding-left:30px;}
+.gnb h3{color:#09F;font-size:17px;}
+.gnb ul{margin-top:20px;}
+.gnb li a{display:block;line-height:200%;padding:0 10px;}
+.gnb li a:hover{background:#09f;color:#FFF;}
+
+#footer{padding:40px 0;background:#666;color:#fff;text-align:center;position:relative;z-index:20;}
+.content_wrap{min-height:500px;}
+.content_title{border-bottom:1px solid #ddd;padding-bottom:20px;margin-bottom:20px;color:#228ae6;}
+.wrap{margin:0 auto;width:1200px;}
+.content{min-height:250px;}
+
+/* content default */
+.home,
+.price{background:#fafafa;padding:50px 0;border-bottom:1px dotted #ddd;}
+.gallery,
+.contact{padding:30px;}
+
+/* gallery */
+.gallery ul:after{content:"";display:block;clear:both;}
+.gallery li{background:no-repeat center / cover;width:25%;padding-top:25%;float:left;cursor:pointer;position:relative;}
+.gallery li:before{content:"크게 보기";background:rgba(0,0,0,.5);color:#fff;position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;font-size:30px;transition:.3s;opacity:0;}
+.gallery li:hover:before{opacity:1;}
+
+/* price */
+.price ul:after{content:"";display:block;clear:both;}
+.price li{float:left;width:calc(25% - 10px);margin:5px;}
+.price .img_wrap{padding-top:100%;background:no-repeat center / cover;border:1px solid #ddd;}
+.price .info{text-align:center;margin-top:5px;font-size:13px;}
+
+/* btn_default */
+.btn_default,
+.btn_submit{display:inline-block;color:#fff;border:none;border-bottom:2px solid #666;border-radius:3px;padding:5px 10px;letter-spacing:-1px;text-decoration:none;}
+.btn_default{background:#7e8c8d;border-color:#545454;}
+.btn_submit{background:#237fbc;border-color:#185983;}
+
+/* contact */
+.contact{padding-bottom:100px;}
+
+/* frm table */
+.frm_title{text-align:center;font-size:23px;font-weight:200;margin-bottom:30px;}
+.frm_title:before,
+.frm_title:after{content:"";width:200px;display:inline-block;vertical-align:middle;height:1px;background:#ddd;margin:-3px 20px 0;}
+.frm_table{background:#fff;width:800px;margin:0 auto;}
+.frm_table label{display:block;margin-bottom:20px;}
+.frm_table strong{display:block;margin-bottom:5px;font-weight:200;color:#237fbc;}
+.frm_table strong:before{content:"";display:inline-block;height:13px;width:3px;background:#237fbc;margin-right:5px;}
+.frm_table input{height:40px;padding:5px;box-sizing:border-box;background:#eee;font-size:13px;border:none;}
+.frm_table textarea{padding:5px;box-sizing:border-box;background:#eee;font-size:13px;border:none;width:100%;}
+.frm_table .fullSize{width:100%;}
+
+/* data-list */
+.data-list{width:800px;margin:40px auto 0;}
+.data-list table{width:100%;border-top:2px solid #666;border-collapse:collapse;border-spacing:0;}
+.data-list td,
+.data-list th{border-bottom:1px solid #ddd;height:40px;text-align:center;}
+.data-list th{background:#f5f5f5;}
+.data-list td{}
+
+/* btn_group */
+.btn_group{text-align:center;margin-top:20px;}

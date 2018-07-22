@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/fontawesome-all.min.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="left">
+			<img src="./img/logo.png" alt="logo.png">
+			<div class="box">
+				<a href="./index.html"><i class="fas fa-adjust"></i>기본 버튼<span>&gt;</span></a>
+				<div class="box_hr"></div>
+				<a href="./icon.html"><i class="fas fa-adjust"></i>아이콘<span>&gt;</span></a>
+				<div class="box_hr"></div>
+				<a href="./butico.html"><i class="fas fa-adjust"></i>아이콘 + 버튼<span>&gt;</span></a>
+				<div class="box_hr"></div>
+				<a href="./table.html" class="active"><i class="fas fa-adjust"></i>테이블<span>&gt;</span></a>
+				<div class="box_hr"></div>
+				<a href="./board.html"><i class="fas fa-adjust"></i>게시판<span>&gt;</span></a>
+				<div class="box_hr"></div>
+			</div>
+		</div>
+		<div class="right">
+			<h3 class="h3">테이블</h3>
+			<input type="radio" name="table" id="table1" checked>
+			<input type="radio" name="table" id="table2">
+			<input type="radio" name="table" id="table3">
+			<label for="table1">111</label>
+			<label for="table2">222</label>
+			<label for="table3">333</label>
+			<table class="table tbstyle1">
+				<caption class="title">테이블 캡션 1</caption>
+				<colgroup>
+					<col class="w15">
+					<col class="w40">
+					<col class="w15">
+					<col class="w15">
+					<col class="w15">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th colspan="2">타이틀</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tb_left" rowspan="2">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_left">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_left">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_left">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="tb_left">결과</td>
+						<td class="tb_center">결과</td>
+						<td class="tb_right">결과</td>
+						<td class="tb_left">결과</td>
+						<td class="tb_left">결과</td>
+					</tr>
+				</tfoot>
+			</table>
+			<table class="table tbstyle2">
+				<caption class="title">테이블 캡션 1</caption>
+				<colgroup>
+					<col class="w15">
+					<col class="w40">
+					<col class="w15">
+					<col class="w15">
+					<col class="w15">
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan ="3">타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_center" rowspan="3">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_center">내용</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="tb_center">결과</td>
+						<td class="tb_center">결과</td>
+						<td class="tb_right">결과</td>
+						<td class="tb_center">결과</td>
+						<td class="tb_center">결과</td>
+					</tr>
+				</tfoot>
+			</table>
+			<table class="table tbstyle3">
+				<caption class="title">테이블 캡션 3</caption>
+				<colgroup>
+					<col class="w15">
+					<col class="w40">
+					<col class="w15">
+					<col class="w15">
+					<col class="w15">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th>타이틀</th>
+						<th colspan="2">타이틀</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tb_left" rowspan="5">내용</td>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+					<tr>
+						<td class="tb_right">내용</td>
+						<td class="tb_center">내용</td>
+						<td class="tb_left">내용</td>
+						<td class="tb_left">내용</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="tb_left">결과</td>
+						<td class="tb_right">결과</td>
+						<td class="tb_center">결과</td>
+						<td class="tb_left">결과</td>
+						<td class="tb_left">결과</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+	<footer class="footer"> 
+		Copyright (c) 2018 webskills allrights reserved.
+	</footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+	//path
+	define('CSS_URL', SRC_URL.'/css');
+	define('JS_URL', SRC_URL.'/js');
+	define('UP_URL', SRC_URL.'/upload');
+	define('_PUBLIC', _ROOT."/public");
+	define('_UPDIR', _PUBLIC."/upload");
+
+
+	// session
+	// session
+	// session
+	// session
+	// session	// session
