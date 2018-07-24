@@ -1,0 +1,25 @@
+{
+	"members" : [
+		{
+			"id" : "user1",
+			"password" : "asdasd",
+			"name" : "유저1"
+		},{
+			"id" : "user2",
+			"password" : "asdasd",
+			"name" : "유저2"
+		},{
+			"id" : "user3",
+			"password" : "asdasd",
+			"name" : "유저3"
+		},{
+			"id" : "user4",
+			"password" : "asdasd",
+			"name" : "유저4"
+		},{
+			"id" : "user5",
+			"password" : "asdasd",
+			"name" : "유저5"
+		}
+	]
+}

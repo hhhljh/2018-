@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script src="./js/jquery/jquery-1.12.3.min.js"></script>
+	<script src="./js/jquery/jquery-ui-1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="./js/jquery/jquery-ui-1.11.4/jquery-ui.css">
+	<script src="./js/script.js"></script>
+	<link rel="stylesheet" href="./js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./js/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script src="./js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<header>
+		<div class="w100">
+			<a href="index.html" class="home"><img src="./images/logo.png" alt="Green wheel" title="Green wheel"></a>
+			
+			<ul>
+				<li><a href="./member.html">로그인</a></li>
+				<li><a href="./rental.html">검색예약</a></li>
+				<li><a href="./mypage.html">마이페이지</a></li>
+				<li class="subMenu">
+					<a href="./admin.html">관리자</a>
+					<div class="sub">
+						<a href="./admin.html">결제관리</a>
+						<a href="./item.html">예약관리</a>
+						<a href="./material.html">통계자료</a>
+					</div>
+				</li>
+			</ul>
+		</div><!--w100-->
+	</header>
+	
+	<div id="content">
+		<div class="w100">
+			<div class="card">			
+				<h1 class="title">다중 결제 페이지</h1>
+				<form action="#" method="post">
+					<ul class="info multiple">
+						<li>
+							<label>품목명 :</label>
+							<p>24 팬텀 CITY, 쉐보레 볼트 EV, 코나 일렉트릭</p>
+						</li>
+						<li>
+							<label>렌탈일(시간) :</label>
+							<span>2018-05-01 13:00:00 ~ 2018-05-01 15:00:00</span>
+							<span>2018-05-02 13:00:00 ~ 2018-05-05 13:00:00</span>
+							<span>2018-05-06 13:00:00 ~ 2018-05-10 13:00:00</span>
+						</li>
+						<li>
+							<label>렌탈/반납지점</label>
+							<span>여수시/여수시</span>
+						</li>
+						<li>
+							<label>할인/할증금액 :</label>
+							<span>- 133,500</span> 원
+						</li>
+						<li>
+							<label>결제금액 :</label>
+							<span>= 311,500</span> 원
+						</li>
+						<li>
+							<label>회원 할인금액 :</label>
+							<span>- 15,575</span> 원
+						</li>
+						<li>
+							<label>총 결제금액 :</label>
+							<h2>= 295,925</h2> 원
+						</li>
+					</ul>
+					
+					<div class="pay">
+						<ul class="row">
+							<li class="col-md-6 active"><a href="#cardpay" data-toggle="tab" class="col-md-12 blueBtn">카드결제</a></li>
+							<li class="col-md-6"><a href="#cashpay" data-toggle="tab" class="check col-md-12">무통장입금</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="cardpay">
+								<ul class="cardPay">
+									<li>
+										<label>카드선택 :</label>
+										<input type="radio" name="card"><span>농협</span>
+										<input type="radio" name="card"><span>하나</span>
+										<input type="radio" name="card"><span>신한</span>
+										<input type="radio" name="card"><span>국민</span>
+										<input type="radio" name="card"><span>우리</span>
+									</li>
+									<li>
+										<label>카드번호 :</label>
+										<input type="text" maxlength="16" name="cardNum" size="30" id="cardNum">
+										<span class="ex">카드번호 16자리</span>
+									</li>
+								</ul>
+							</div><!--cardpay-->
+							
+							<div role="tabpanel" class="tab-pane" id="cashpay">
+								<ul class="cashPay">
+									<li>
+										<label>입금은행 : </label>
+										<select name="" id="">
+											<option disabled selected>::은행선택::</option>
+											<option>우리은행 : 9876-6543-6543-7890</option>
+											<option>기업은행 : 3210-6549-1234</option>
+											<option>농협 : 1234-7891-9876</option>
+											<option>신한은행 : 6543-9876-7412</option>
+										</select>
+									</li>
+									<li>
+										<label>송금자명 : </label>
+										<input type="text">
+									</li>
+									<li>
+										<label>전화번호 : </label>
+										<input type="text" maxlength="11" name="phone" size="30" id="phone">
+									</li>
+								</ul>
+							</div><!--cashpay-->
+						</div><!--tab-content-->
+					</div><!--pay-->
+					<button class="btn blueBtn payment">결제하기</button>
+				</form>
+			</div><!--card-->
+		</div><!--w100-->
+	</div><!--content-->
+</body>
+</html>

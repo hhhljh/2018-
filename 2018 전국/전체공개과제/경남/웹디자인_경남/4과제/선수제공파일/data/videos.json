@@ -1,0 +1,75 @@
+{
+	"videos" : [
+		{
+			"user" : "user1",
+			"name" : "my first video",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 0점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user1",
+			"name" : "my first videos",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 1점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user1",
+			"name" : "my second video",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 11점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user1",
+			"name" : "my mother's first video",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 9점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user1",
+			"name" : "my first vid",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 6점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user2",
+			"name" : "my first video one",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 4점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user2",
+			"name" : "my first video two",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 4점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user2",
+			"name" : "videos",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 39점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user3",
+			"name" : "my",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는 36점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		},{
+			"user" : "user3",
+			"name" : "first",
+			"vsource" : "/videos/video.mp4",
+			"text" : "이 동영상의 유사도 점수는27점입니다.",
+			"date" : "2015-01-01 00:00:00",
+			"hit" : "45932"
+		}
+	]
+}

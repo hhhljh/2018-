@@ -1,0 +1,215 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; color: #000; outline-color: #03b; }
+body { overflow-x: hidden; }
+.pointer { cursor: pointer; }
+textarea:focus { outline: none; }
+.css-init { -webkit-appearance: none; border: none; padding: 0; background-color: #fff; color: #000; outline: none; }
+button[disabled="true"] { opacity: 0.3 !important; }
+
+header { width: 100%; height: 50px; background-color: #fff; display: flex; align-content: center; position: fixed; line-height: 50px; box-shadow: 0 0 5px #aaa; z-index: 99; }
+header > #menu-btn { margin-left: 20px; color: #333; line-height: 50px;}
+header > a > #home-btn { margin-left: 20px; color: #333; line-height: 50px;}
+header > #logo { margin-left: 50px; display: inline-block; font-size: 25px; }
+@media screen and (min-width: 780px) {	
+	header > #search-wrap { margin-left: 50px; line-height: 50px; height: 50px; flex: 1; width: 600px; min-width: 300px; margin-right: 250px; display: inline-block; }
+	header > #search-wrap > .wrap { height: 50px; display: flex; align-items: center; }
+	header > #search-wrap > .wrap > form { display: contents; }
+	header > #search-wrap > .wrap > form > .input-wrap { width: 550px; height: 30px; display: inline-block; box-sizing: border-box; border: 1px solid #aaa; position: relative; }
+	header > #search-wrap > .wrap > form > .input-wrap > #search { border: 0px; padding: 10px; width: 100%; height: 28px; box-sizing: border-box; position: absolute; top: 0; }
+	header > #search-wrap > .wrap > form > #search-btn { vertical-align: middle; box-sizing: border-box; width: 50px; height: 30px; display: inline; -webkit-appearance: none; color: #ddd; border: 1px solid #aaa; border-width: 1px 1px 1px 0px; background-color: #eee; cursor: pointer; margin: 10px 0px;}
+	header > #search-wrap > .wrap > form > #search-btn > i { color: #888; }
+	header > #search-wrap > .wrap > form > #search-btn:hover { background-color: #ddd; }
+	header > #search-wrap > .wrap > form > #search-btn:hover > i { color: #000; }
+	header > #icons > a > #search-open-btn { display: none; }
+	header > #icons { min-width: 150px; height: 50px; position: absolute; right: 10px; top: 0; }
+}
+@media screen and (max-width: 779px) {
+	header > #search-wrap { display: none; }
+	header > #icons > a > #search-open-btn { display: inline-block; }
+	header > #icons { width: 200px; height: 50px; position: absolute; right: 10px; top: 0; }
+}
+header > #icons > i,
+header > #icons > a > i { color: #777; padding: 10px; cursor: pointer; }
+header > #icons > .user { margin: 10px; width: 30px; height: 30px; border-radius: 50px; overflow: hidden; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; }
+header > #icons > .user > img { width: 30px; height: 30px; position: absolute; top: 0; }
+header > #icons > #myInfo { width: 120px; line-height:30px; display: none; border-radius: 10px; border: 1px solid #aaa; box-shadow: 0 0 2px #aaa; position: absolute;right: 10px; top: 65px; background-color: #fff; padding: 10px; cursor: auto; }
+header > #icons > #myInfo > .link { text-align: center; width: 120px; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+header > #icons > #myInfo > .link:hover { background-color: #efefef; cursor: pointer; }
+header > #icons > #myInfo::before { content: ""; width: 0px height 0px; border-bottom: 20px solid #aaa; border-left: 20px solid transparent; border-right: 20px solid transparent; display: inline-block; position: absolute; top: -21px; right: 5px; }
+header > #icons > #channel-view:checked ~ #myInfo { display: block; }
+header > #icons > #login { display: inline-block; cursor: pointer; }
+header > #icons > #login-view:checked ~ #login-form { display: inline-block; }
+header > #icons > #login-form { width: 160px; height: 140px; display: none; line-height:15px; border-radius: 10px; border: 1px solid #aaa; box-shadow: 0 0 2px #aaa; position: absolute; right: 100px; top: 55px; background-color: #fff; padding: 10px; cursor: auto; }
+header > #icons > #login-form::before { content: ""; width: 0px height 0px; border-bottom: 20px solid #aaa; border-left: 20px solid transparent; border-right: 20px solid transparent; display: inline-block; position: absolute; top: -21px; right: 5px; }
+header > #icons > #login-form > form > input { width: 90%; height: 20px; padding: 3px; border: none; border-bottom: 1px solid #aaa; display: block; margin: 0 auto; }
+header > #icons > #login-form > form > input:focus { outline: none; border-bottom: 1px solid #aaa; }
+header > #icons > #login-form > form > button { width: 80%; height: 30px; display: block; margin: 0 auto; -webkit-appearance: none; border: 1px solid #00c158; border-radius: 10px; background-color: #fff; color: #00c158; transition: color 0.3s, background-color 0.3s; cursor: pointer; }
+header > #icons > #login-form > form > button:hover { background-color: #00c158; color: #fff; }
+header > #icons > #login-form > form > button:active { outline: none; }
+
+
+
+
+/* 메인페이지 */
+#side-menu { width: 240px; height: calc(100% - 51px); position: fixed; left: 0; top: 51px; background-color: #fafafa; overflow: hidden; }
+#side-menu > ul > span { color: #555; font-size: 13px; padding: 15px; display: inline-block; padding-bottom: 0px; }
+#side-menu > ul+ul {  border-top: 1px solid #dfdfdf; }
+#side-menu > ul > a > li { padding: 15px; color: #787878; line-height: 30px; }
+#side-menu > ul > a > li:hover { background-color: #eaeaea; color: #000; }
+#side-menu > ul > a > li > i { padding-left: 3px; padding-right: 15px; color: #555; }
+#side-menu > #subscribes { overflow-y: auto; height: calc(100vh - 292px); }
+#side-menu > #subscribes > a > li > .user { width: 30px; height: 30px; border-radius: 50px; overflow: hidden; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; }
+#side-menu > #subscribes > a > li > .user > img { width: 30px; height: 30px; position: absolute; top: 0; }
+
+@media screen and (max-width : 480px) {
+	#side-menu { display: none; }
+}
+
+#main { width: calc(100% - 240px); box-sizing: border-box; position: relative; left: 240px; top: 50px; padding: 50px; overflow-x: hidden; }
+#main > .list { width: 100%; font-size: 0; padding: 50px 70px 50px 70px; box-sizing: border-box; display: flex; /* justify-content: center; */ }
+#main > .list > .videos { position: relative; min-width: 200px; }
+#main > .list > .videos > .main-title { font-size: 20px; padding-bottom: 20px; position: absolute; top: -40px; left: 0px; }
+#main > .list > .videos > .main-title > .sub-title { font-size: 15px; font-weight: normal; color: #aaa; padding-left: 15px; }
+#main > .list > .videos > .video { width: 210px; height: 190px;  display: inline-block; font-size: 1vw; padding: 0px 3px 30px 3px; }
+#main > .list > .videos > .video > .text { width: 210px; height: 70px; }
+#main > .list > .videos > .video > .text > h3 { font-size: 15px; margin-bottom: 10px; color: #333; }
+#main > .list > .videos > .video > .text > h4 { font-size: 12px; color: #aaa; font-weight: normal; }
+#main > .list > .videos > .video > .text > h5 { font-size: 12px; color: #aaa; font-weight: normal; }
+
+/*검색결과*/
+#search-result { width: calc(100% - 240px); position: relative; left: 240px; top: 50px; }
+#search-result { padding: 50px; }
+#search-result > .list > h2 { padding-bottom: 30px; font-weight: normal; }
+#search-result > .list > .video { padding-bottom: 30px; }
+#search-result > .list > .video::after { content: ""; display: block; clear: both; }
+#search-result > .list > .video > a > video { float: left; }
+#search-result > .list > .video > .text { padding: 10px; display: inline-block; }
+#search-result > .list > .video > .text > h3 { font-size: 20px; font-weight: normal; padding-bottom: 10px; }
+#search-result > .list > .video > .text > p { font-size: 15px; color: #777; padding-bottom: 10px; }
+#search-result > .list > .video > .text > h4,
+#search-result > .list > .video > .text > h5,
+#search-result > .list > .video > .text > h6 { font-weight: normal; font-size: 13px; color: #aaa; }
+
+
+/* 영상 보기 */
+/* 영상 */
+#view { width: calc(100% - 240px); position: relative; left: 250px; top: 51px; padding-top: 50px; padding-left: 50px; }
+#view::after { content: ""; clear: both; display: block; }
+#view > #video-wrap { float: left; display: inline-block; width: 854px; border-bottom: 3px solid #aaa; margin-bottom: 50px; }
+#view > #video-wrap > #title { width: 100%; padding-bottom: 10px; border-bottom: 1px solid #aaa; }
+#view > #video-wrap > #title > p { padding-top: 10px; }
+#view > #video-wrap > #title > p > span > i { vertical-align: middle; color: #aaa; }
+#view > #video-wrap > #title > p > span > .clicked { color: #333; }
+#view > #video-wrap > #info { border-bottom: 1px solid #aaa; position: relative; }
+#view > #video-wrap > #info::after { content: ""; clear: both; display: block; }
+#view > #video-wrap > #info > a > .user { width: 50px; height: 50px; border-radius: 50px; overflow: hidden; margin: 10px; display: inline-block; float: left; }
+#view > #video-wrap > #info > a > .user > img { width: 50px; height: 50px; }
+#view > #video-wrap > #info > h3 { display: inline-block; font-weight: normal; margin-top: 10px; font-size: 16px; }
+#view > #video-wrap > #info > h4 { font-size: 13px; font-weight: normal; }
+#view > #video-wrap > #info > #subscribe { padding: 10px; background-color: #383; display: inline-block; color: #fff; position: absolute; right: 10px; top: 10px; }
+#view > #video-wrap > #info > #note { padding: 15px; padding-left: 70px; font-size: 13px; }
+#view > #video-wrap > #comment > h2 { padding: 10px; font-weight: normal; font-size: 17px; }
+#view > #video-wrap > #comment > ul {  }
+#view > #video-wrap > #comment > ul > li { padding: 10px; margin-bottom: 25px; }
+#view > #video-wrap > #comment > ul > li::after { content: ""; display: block; clear: both; }
+#view > #video-wrap > #comment > ul > li > form > .user { width: 40px; height: 40px; overflow: hidden; border-radius: 40px; display: inline-block; float: left; }
+#view > #video-wrap > #comment > ul > li > form > .user > img { width: 40px; height: 40px; }
+#view > #video-wrap > #comment > ul > li > form > textarea { margin-left: 10px; width: calc(100% - 52px); resize: none; padding-bottom: 10px; border: none; border-bottom: 1px solid #aaa; font-size: 15px; }
+#view > #video-wrap > #comment > ul > li > form > #write { float: right; padding: 10px 20px 10px 20px; background-color: #383; color: #fff; }
+#view > #video-wrap > #comment > ul > li > .user { width: 40px; height: 40px; overflow: hidden; border-radius: 40px; display: inline-block; float: left; }
+#view > #video-wrap > #comment > ul > li > .user > img { width: 40px; height: 40px; }
+#view > #video-wrap > #comment > ul > li > textarea { margin-left: 10px; width: calc(100% - 52px); resize: none; padding-bottom: 10px; border: none; border-bottom: 1px solid #aaa; font-size: 15px; }
+#view > #video-wrap > #comment > ul > li > h3 { font-weight: normal; padding-left: 50px; font-size: 14px; }
+#view > #video-wrap > #comment > ul > li > h3 > span { font-size: 14px; color: #aaa; }
+#view > #video-wrap > #comment > ul > li > p { padding-left: 50px; padding-top: 10px; font-size: 13.5px; }
+#view > #video-wrap > #comment > ul > li > p > i { color: #aaa; }
+
+/* 채널 동영상 */
+#view > #video-preview { margin-left: 24px; width: 400px; display: inline-block; }
+#view > #video-preview > h2 { font-weight: normal; font-size: 16px;  margin-bottom: 10px; }
+#view > #video-preview > .video { margin-bottom: 18px; }
+#view > #video-preview > .video::after { clear: both; }
+#view > #video-preview > .video > a > video { float: left; }
+#view > #video-preview > .video > .text { margin-left: 210px; padding: 10px; height: 100px; }
+#view > #video-preview > .video > .text > h3 { font-weight: normal; font-size: 14px; }
+#view > #video-preview > .video > .text > h4 { font-weight: normal; font-size: 12px; padding-top: 10px; color: #7f7f7f; }
+#view > #video-preview > .video > .text > h5 { font-weight: normal; font-size: 11px; color: #7f7f7f; }
+#view > #video-preview > .video > .text > h6 { font-weight: normal; font-size: 11px; color: #7f7f7f; }
+
+/* 채널 보기 */
+/* 메인 */
+#channel { width: calc(100% - 240px); box-sizing: border-box; position: relative; left: 240px; top: 50px; overflow-x: hidden; }
+#channel > #channel-info { width: 100%; height: 150px; padding: 50px 50px 0px 50px; background-color: #f5f5f5; box-sizing: border-box; }
+#channel > #channel-info::after { content: ""; display: block; clear: both; }
+#channel > #channel-info > .user { width: 80px; height: 80px; border-radius: 80px; overflow: hidden; float: left; margin: 10px; }
+#channel > #channel-info > .user > img { width: 80px; height: 80px; }
+#channel > #channel-info > h2 { font-size: 25px; font-weight: normal; line-height: 100px; margin-left: 30px; display: inline-block; }
+#channel > #channel-info > h2 > #subs-count { font-size: 13px; font-weight: lighter; color: #777; }
+#channel > #channel-info > button { font-size: 16px; padding: 10px; background-color: #5a5; color: #fff; float: right; margin-right: 20px; margin-top: 50px; }
+#channel > #channel-info > span { display: inline-block; margin-top: 55px; margin-right: 50px; float: right; font-size: 17px; }
+#channel > #channel-info > span > i { vertical-align: middle; color: #aaa }
+#channel > #channel-info > span > i.clicked { color: #222; }
+#channel > #contents { padding: 50px; }
+#channel > #contents > .list > h2 { padding-bottom: 30px; font-weight: normal; }
+#channel > #contents > .list > .video { padding-bottom: 30px; position: relative; }
+#channel > #contents > .list > .video::after { content: ""; display: block; clear: both; }
+#channel > #contents > .list > .video > a > video { float: left; }
+#channel > #contents > .list > .video > .text { max-width: calc(100% - 230px); padding: 10px; display: inline-block; }
+#channel > #contents > .list > .video > .text > h3 { font-size: 20px; font-weight: normal; padding-bottom: 10px; }
+#channel > #contents > .list > .video > .text > p { font-size: 15px; color: #777; padding-bottom: 10px; }
+#channel > #contents > .list > .video > .text > h4,
+#channel > #contents > .list > .video > .text > h5,
+#channel > #contents > .list > .video > .text > h6 { font-weight: normal; font-size: 13px; color: #aaa; }
+#channel > #contents > .list > .video > .text > a { font-size: 12px; color: #aaa; font-weight: bold; position: absolute; bottom: 40px; right: 10px; }
+
+/* 플레이리스트 */
+#playlist { width: 100%; box-sizing: border-box; position: relative; padding: 50px; }
+#playlist > h2 { font-weight: normal; }
+#playlist > .list { width: 100%; font-size: 0; box-sizing: border-box; margin-top: 100px; }
+#playlist > .list > .videos { position: relative; display: flex; flex-wrap: wrap; }
+#playlist > .list > .videos > .main-title { font-size: 20px; padding-bottom: 20px; position: absolute; top: -40px; left: 0px; }
+#playlist > .list > .videos > .main-title > .sub-title { font-size: 15px; font-weight: normal; color: #aaa; padding-left: 15px; }
+#playlist > .list > .videos > .video { width: 210px; height: 190px;  display: inline-block; font-size: 1vw; padding: 0px 3px 30px 3px; }
+#playlist > .list > .videos > .video > .text { width: 210px; height: 70px; position: relative; }
+#playlist > .list > .videos > .video > .text > h3 { font-size: 15px; margin-bottom: 10px; color: #333; }
+#playlist > .list > .videos > .video > .text > h4,
+#playlist > .list > .videos > .video > .text > h5 { font-size: 12px; color: #aaa; font-weight: normal; }
+#playlist > .list > .videos > .video > .text > a { font-size: 12px; color: #aaa; font-weight: bold; position: absolute; bottom: 8px; right: 10px; }
+
+
+/* 알림 페이지 */
+#alert { width: 100%; box-sizing: border-box; padding: 50px; position: relative; }
+#alert > .list {  }
+#alert > .list > .item { padding: 10px; min-height: 120px; }
+#alert > .list > .item::after { content: ""; clear: both; display: block; }
+#alert > .list > .item > .user { width: 50px; height: 50px; border-radius: 50px; overflow: hidden; display: inline-block; vertical-align: middle; }
+#alert > .list > .item > .user > img { width: 50px; height: 50px; }
+#alert > .list > .item > p { display: inline-block; padding: 5px; vertical-align: middle; }
+#alert > .list > .item > p > span { color: #8f8f8f; }
+#alert > .list > .item > a > video { vertical-align: middle; float: right; }
+
+/* 업로드 페이지 */
+#upload { width: calc(100% - 240px); box-sizing: border-box; padding: 50px; position: relative; top: 50px; left: 240px; }
+#upload > h2 { font-weight: normal; font-size: 20px; }
+#upload > #up-form { margin-top: 50px; }
+#upload > #up-form > table { border-collapse: collapse; }
+#upload > #up-form > table > tbody > tr > td > #progress { width: 100%; height: 20px; border: 1px solid #777; box-shadow: inset 0 0 2px #000; }
+#upload > #up-form > table > tbody > tr > td > #progress > #bar { height: 20px; background-color: #a0c3ff; width: 0%; max-width: 100%; transition: width 0.3s; }
+#upload > #up-form > table > tbody > tr > td > input[type="text"],
+#upload > #up-form > table > tbody > tr > td > textarea { border-bottom: 1px solid #000; padding: 5px; width: 100%; max-width: 490px; font-size: 20px; font-weight: normal; }
+#upload > #up-form > table > tbody > tr > td:nth-child(1) { width: 100px; padding: 10px; }
+#upload > #up-form > table > tbody > tr > td:nth-child(2) { width: 100px; padding: 10px; width: 500px; }
+#upload > #up-form > table > tbody > tr > td > button { padding: 10px 20px 10px 20px; background-color: #008f25; color: #fff; }
+
+/* 회원가입 페이지 */
+#form { width: calc(100% - 240px); box-sizing: border-box; position: relative; left: 240px; top: 50px; overflow-x: hidden; }
+#form > #form-container { width: 50%; padding: 30px; min-height: 450px; border: 1px solid #aaa; border-radius: 20px; margin: 0 auto; margin-top: 30px; }
+#form > #form-container > h2 { margin: 0 0 20px 0; }
+#form > #form-container > hr { margin-top: 20px; margin-bottom: 20px; }
+#form > #form-container > input { display: block; width: 100%; padding: 15px; box-sizing: border-box; margin: 5px 0 22px 0 ; }
+#form > #form-container > .registerbtn { background-color: #4CAF50; color: white; padding: 16px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; opacity: 0.9; }
+#form > #form-container > .registerbtn:hover { opacity: 1; }
+#form > #form-container > label > .false { float: right; color: red; }
+#form > #form-container > label > .true { float: right; color: green; }
+
+pre { width: calc(100% - 240px); box-sizing: border-box; position: relative; left: 240px; padding: 20px; background-color: #aaa; border-radius: 20px; margin: 300px 0 10px 0; }
+pre+pre { margin-top: 10px; }

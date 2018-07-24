@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>지역 문화 교류 센타타타</title>
+	<link rel="stylesheet" type="text/css" href="./fontawesome/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<!-- 헤더 -->
+	<header>
+		<i id="menu-btn" class="fa fa-bars fa-lg pointer"></i>
+		<h1 id="logo">전남TUBE</h1>
+		<!-- 검색창 -->
+		<div id="search-wrap">
+			<div class="wrap">
+				<form action="./search.html">
+					<div class="input-wrap"><input type="text" name="search" id="search" placeholder="검색"></div>
+					<button type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<!-- 검색창 가릴시 -->
+		<div id="icons">
+			<a href="./search.html"><i id="search-open-btn" class="fa-lg fa fa-search"></i></a>
+			<input type="checkbox" hidden="" id="login-view">
+			<label id="login" for="login-view">로그인</label>
+			<!-- 비로그인시 -->
+			<div id="login-form" style="./*display: none;*/">
+				<form action="./index.html" method="post">
+					아이디<br/>
+					<input type="text" id="id" name="id"><br/>
+					비밀번호<br/>
+					<input type="password" id="pw" name="pw"><br/>
+					<button type="submit">로그인</button>
+				</form>
+			</div>
+			<a href="./register.html">
+				&nbsp;회원가입
+			</a>
+
+			<!-- 로그인시 -->
+			<a href="./upload.html"><i class="fa fa-upload fa-lg pointer"></i></a>
+			<a href="./alert.html"><i class="fa fa-bell fa-lg pointer"></i></a>
+			<input type="checkbox" hidden="" id="channel-view">
+			<label for="channel-view" class="user pointer" href="./channel.html" "><img src="./imgs/user.jpg"></label>
+			<div id="myInfo" style="./*display: none;*/">
+				<a class="link" href="./channel.html">논두렁 녹음러</a>
+				<a class="link" href="#" id="logout">로그아웃</a>
+				
+			</div>
+		</div>
+	</header>
+
+	<!-- 사이드 메뉴 -->
+	<aside id="side-menu">
+		<ul id="category">
+			<a href="./index.html"><li class="pointer"><i class="fa fa-fw fa-home fa-lg"></i>홈</li></a>
+			<a href="#"><li class="pointer"><i class="fa fa-fw fa-fire fa-lg"></i>인기 급상승 동영상</li></a>
+		</ul>
+		<ul id="user-list">
+			<a href="./recent.html"><li class="pointer"><i class="fa fa-fw fa-clock fa-lg"></i>최근 시청한 동영상</li></a>
+			<a href="#"><li class="pointer"><i class="fa fa-fw fa-list-ul fa-lg"></i>플레이리스트</li></a>
+		</ul>
+		<ul id="subscribes">
+			<span>구독</span>
+			<a href="./channel.html"><li class="pointer">
+				<div class="user">
+					<img src="./imgs/user.jpg">
+				</div>
+				전남도청
+			</li></a>
+			<a href="./channel.html"><li class="pointer">
+				<div class="user">
+					<img src="./imgs/user.jpg">
+				</div>
+				 여수엑스포
+			</li></a>
+		</ul>
+	</aside>
+	<!-- end -->
+<!-- URL -->
+<form action="./index.html" id="form" method="post">
+	<div id="form-container">
+		<h2>회원가입</h2>
+		<p>회원가입을 하고 영상을 자유롭게 나눠보세요!</p>
+		<hr>
+
+		<label for="regi-id"><b>아이디</b><span class="idvali false"></span><span class="idvali true"></span></label>
+		<input type="text" onkeyup="idDuplechk()" placeholder="ID" name="id" id="regi-id" required>
+		
+		<label for="regi-name"><b>이름</b><span class="namevali false"></span><span class="namevali true"></span></label>
+		<input type="text" onkeyup="nameDuplechk()" placeholder="NAME" name="name" id="regi-name" required>
+		
+		<label for="regi-psw"><b>비밀번호</b><span class="pwvali false"></span><span class="pwvali true"></span></label>
+		<input type="password" onkeyup="pwChk(); pwrChk();" placeholder="PASSWORD" name="pw" id="regi-pw" required>
+
+		<label for="regi-pwr"><b>비밀번호 재입력</b><span class="pwrvali false"></span><span class="pwrvali true"></span></label>
+		<input type="password" onkeyup="pwrChk()" placeholder="PASSWORD" name="pwr" id="regi-pwr" required>
+		<hr>
+
+		<button type="submit" id="regi-btn" class="registerbtn">가입하기</button>
+	</div>
+</form>
+
+<script type="text/javascript">
+var id = document.getElementById('regi-id');
+var username = document.getElementById('regi-name');
+var pw = document.getElementById('regi-pw');
+var pwr = document.getElementById('regi-pwr');
+
+var idValiUrl = '/user/chk_id'	// write your url
+var nameValiUrl = '/user/chk_name'	// write your url
+
+function idDuplechk() {
+	if (id.value.length) {
+		if (id.value.length > 12 || id.value.length < 4) {
+			clear();
+			$('.idvali.false').text('아이디는 4자 이상 12자 이하로 작성해 주세요!');
+			invalid();
+		} else if (!id.value.match(/^[a-zA-Z][a-zA-Z0-9]*$/gi)) {
+			clear();
+			$('.idvali.false').text('아이디는 영문자로 시작해야하며 영어와 숫자만 사용할 수 있습니다!');
+			invalid();
+			return;
+		} else {
+			$.post(idValiUrl,{id:id.value},function(data){
+				if (data) {
+					clear();
+					$('.idvali.true').text('사용 가능한 아이디 입니다!');
+					valid();
+				} else {
+					clear();
+					$('.idvali.false').text('이미 존재하는 아이디 입니다!');
+					invalid();
+				}
+			});
+		}
+	} else {
+		clear();
+	}
+	function clear() {
+		$('.idvali.false').text('');
+		$('.idvali.true').text('');
+	}
+}
+
+function nameDuplechk() {
+	if (username.value.length) {
+		if (username.value.length > 12) {
+			clear();
+			$('.namevali.false').text('이름은 12자를 넘길 수 없습니다!');
+			invalid();
+			return;
+		}
+		if (!username.value.match(/^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9]*$/gi)) {
+			clear();
+			$('.namevali.false').text('이름은 한글, 알파벳과 숫자만 사용할 수 있습니다!');
+			invalid();
+			return;
+		}
+		clear();
+		$('.namevali.true').text('사용 가능한 이름 입니다!');
+		valid();
+
+	} else {
+		clear();
+	}
+
+	function clear() {
+		$('.namevali.false').text('');
+		$('.namevali.true').text('');
+	}
+}
+
+function pwChk() {
+	if (pw.value.length > 0) {
+		if (pw.value.length < 6 || pw.value.length > 15) {
+			clear();
+			$('.pwvali.false').text("비밀번호는 6자 이상 15자 이하여야 합니다!");
+			invalid();
+		} else if(pw.value.match(/^[#-^*&\\|]*$/)) {
+			$('.pwvali.false').text("#-^*&\\|의 문자는 사용할 수 없습니다!");
+			invalid();
+		} else {
+			clear();
+			$('.pwvali.true').text("사용 가능한 비밀번호 입니다!");
+			valid();
+		}
+	} else {
+		clear();
+		invalid();
+	}
+
+	function clear() {
+		$('.pwvali.false').text('');
+		$('.pwvali.true').text('');
+	}
+}
+
+function pwrChk() {
+	if (pw.value !== pwr.value) {
+		$('.pwrvali.true').text('');
+		$('.pwrvali.false').text('비밀번호와 일치하지 않습니다!');
+		invalid();
+	} else {
+		$('.pwrvali.false').text('');
+		$('.pwrvali.true').text('비밀번호가 일치합니다!');
+		valid();
+	}
+	if (pw.value.length === 0 ) {
+		$('.pwrvali.true').text('');
+		$('.pwrvali.false').text('');
+	}
+}
+
+function invalid() {
+	$('#regi-btn').get(0).disabled=true;
+}
+
+function valid() {
+	$('#regi-btn').get(0).disabled=false;
+}
+
+</script>
+</body>
+</html>

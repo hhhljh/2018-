@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script src="./js/jquery/jquery-1.12.3.min.js"></script>
+	<script src="./js/jquery/jquery-ui-1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="./js/jquery/jquery-ui-1.11.4/jquery-ui.css">
+	<script src="./js/script.js"></script>
+	<link rel="stylesheet" href="./js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./js/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script src="./js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<header>
+		<div class="w100">
+			<a href="index.html" class="home"><img src="./images/logo.png" alt="Green wheel" title="Green wheel"></a>
+			
+			<ul>
+				<li><a href="./member.html">로그인</a></li>
+				<li><a href="./rental.html">검색예약</a></li>
+				<li><a href="./mypage.html">마이페이지</a></li>
+				<li class="subMenu">
+					<a href="./admin.html">관리자</a>
+					<div class="sub">
+						<a href="./admin.html">결제관리</a>
+						<a href="./item.html">예약관리</a>
+						<a href="./material.html">통계자료</a>
+					</div>
+				</li>
+			</ul>
+		</div><!--w100-->
+	</header>
+	
+	<div id="content">
+		<div class="w100">
+			<div class="admin">
+				<h1 class="title">결제 및 반납관리</h1>
+				<table>
+					<tr>
+						<th>회원등급</th>
+						<th>이름</th>
+						<th>아이디</th>
+						<th>품목명</th>
+						<th>대여~반납일</th>
+						<th>대여/반납지점</th>
+						<th>결제금액</th>
+						<th>상태</th>
+					</tr>
+					<tr>
+						<td>일반회원</td>
+						<td>user</td>
+						<td>user123</td>
+						<td>YUNBIKE C1</td>
+						<td>2018-05-01 ~ 2018-06-01</td>
+						<td>여수시/여수시</td>
+						<td>26,600</td>
+						<td>
+							<a href="#" class="btn blueBtn">결제완료</a>
+						</td>
+					</tr>
+					<tr>
+						<td>일반회원</td>
+						<td>user</td>
+						<td>user123</td>
+						<td>YUNBIKE C1</td>
+						<td>2018-05-01 ~ 2018-06-01</td>
+						<td>여수시/여수시</td>
+						<td>26,600</td>
+						<td>
+							<a href="#" class="btn blueBtn">결제완료</a>
+						</td>
+					</tr>
+					<tr>
+						<td>일반회원</td>
+						<td>user</td>
+						<td>user123</td>
+						<td>YUNBIKE C1</td>
+						<td>2018-05-01 ~ 2018-06-01</td>
+						<td>여수시/여수시</td>
+						<td>26,600</td>
+						<td>
+							<span>결제완료</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div><!--w100-->
+	</div><!--content-->
+	
+</body>
+</html>

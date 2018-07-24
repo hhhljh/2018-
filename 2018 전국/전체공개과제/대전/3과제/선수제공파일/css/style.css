@@ -1,0 +1,91 @@
+ *{margin:0; padding:0; box-sizing:border-box;}
+ body{width:100%; height:100%;}
+ a{text-decoration:none; color:#666;}
+ a:hover{color:#ccc;}
+ table{border-collapse:collapse;}
+ table td,th{border:solid 1px #666; padding:8px;}
+ 
+ 
+ #container{width:1000px; min-height:500px; margin:0 auto; position:relative; }
+ 	header{ width:100%; height:80px; position:relative;}
+		#logo{ margin:10px 0; float:left; }
+		#top{float:right; margin-top:50px;}
+	
+	#visual{ width:100%; height:515px;}
+	
+	#con{width:100%; min-height:800px}
+	#con > div:nth-child(1){text-align:center; margin-top:20px;}
+	#con > div:nth-child(2){text-align:center; margin-top:20px; font-size: 24px;}
+	#con > div:nth-child(3){width:100%; margin-top:30px; min-height:140px; border:solid 1px #000; padding:17px 22px 20px 22px;}
+	#con > div:nth-child(3) > img{width:100px; height:100px; float:left; margin:3px;}
+	#con > div:nth-child(3)::after{content:''; clear:both;}
+	
+	#con > div:nth-child(5){width:100%; height:200px; margin-top:40px; text-align:center; font-size:36px;}
+	#con > div:nth-child(5) > p{margin-bottom:20px;}
+	#con > div:nth-child(5) > .left_btn{width:50px; height:140px; margin-left:22px; float:left; border:solid 1px #000; border-right:none; text-align:center; line-height:130px; cursor:pointer}
+	#con > div:nth-child(5) > .center{width:855px; height:140px; float:left; border:solid 1px #000; padding:20px 25px; position:relative; overflow:hidden; }
+	#con > div:nth-child(5) > .right_btn{width:50px; height:140px; float:left; border:solid 1px #000; border-left:none; text-align:center; line-height:130px; cursor:pointer;}
+	#con > div:nth-child(5) > .center > div{width:2015px;  height:100px; float:left; position:absolute; left:0; top:0; margin:20px 3px;  }
+	#con > div:nth-child(5) > .center > div > img{width:100px; height:100px; float:left; margin:0 3px;}
+	
+	#con > div:nth-child(6){width:100%; height:200px; margin-top:40px; text-align:center; font-size:36px;}
+	#con > div:nth-child(6) > p{margin-bottom:20px;}
+	#con > div:nth-child(6) > .left_btn{width:50px; height:140px; margin-left:22px; float:left; border:solid 1px #000; border-right:none; text-align:center; line-height:130px; cursor:pointer}
+	#con > div:nth-child(6) > .center{width:855px; height:140px; float:left; border:solid 1px #000; padding:20px 25px; position:relative; overflow:hidden; }
+	#con > div:nth-child(6) > .right_btn{width:50px; height:140px; float:left; border:solid 1px #000; border-left:none; text-align:center; line-height:130px; cursor:pointer;}
+	#con > div:nth-child(6) > .center > div{width:2300px;  height:100px; float:left; position:absolute; left:0; top:0; margin:20px 3px;  }
+	#con > div:nth-child(6) > .center > div > img{width:100px; height:100px; float:left; margin:0 3px;}
+	
+	#con > div:nth-child(7){width:100%; height:200px; margin-top:40px; text-align:center; font-size:36px;}
+	#con > div:nth-child(7) > p{margin-bottom:20px;}
+	#con > div:nth-child(7) > .left_btn{width:50px; height:140px; margin-left:22px; float:left; border:solid 1px #000; border-right:none; text-align:center; line-height:130px; cursor:pointer}
+	#con > div:nth-child(7) > .center{width:855px; height:140px; float:left; border:solid 1px #000; padding:20px 25px; position:relative; overflow:hidden; }
+	#con > div:nth-child(7) > .right_btn{width:50px; height:140px; float:left; border:solid 1px #000; border-left:none; text-align:center; line-height:130px; cursor:pointer;}
+	#con > div:nth-child(7) > .center > div{width:3000px;  height:100px; float:left; position:absolute; left:0; top:0; margin:20px 3px;  }
+	#con > div:nth-child(7) > .center > div > img{width:100px; height:100px; float:left; margin:0 3px;}
+	
+	#admin_con{width:100%; min-height:100px}
+	#admin_con > div:nth-child(1){text-align:center; margin-top:20px;}
+	#admin_con > div:nth-child(1) p{font-size:36px;}
+	
+	#admin_con{width:100%; min-height:800px}
+	#admin_con > div:nth-child(2){text-align:center; margin-top:20px;}
+	#admin_con > div:nth-child(3){text-align:center; margin-top:20px; font-size: 24px;}
+	#admin_con > div:nth-child(4){text-align:center; margin-top:20px; font-size: 24px;}	
+	
+	#admin_con > div:nth-child(5){width:100%; text-align:center; margin-top:50px; font-size: 24px;}	
+	#admin_con > div:nth-child(5) p{font-size:36px;}
+	#admin_con > div:nth-child(5) table{width:100%; margin-top:20px;}
+	
+	#admin_con > div:nth-child(6){width:100%; text-align:center; margin-top:50px; font-size: 24px;}	
+	#admin_con > div:nth-child(6) p{font-size:36px;}
+	#admin_con > div:nth-child(6) table{width:100%; margin-top:20px;}
+	
+	#join_con{width:100%; min-height:100px}
+	#join_con > div:nth-child(1){text-align:center; margin-top:20px;}
+	#join_con > div:nth-child(1) p{font-size:36px;}
+	
+	#join_con > div:nth-child(2){text-align:center; margin-top:20px; font-size: 24px;}
+	#join_con > div:nth-child(2) table{margin:0 auto;}
+	#join_con > div:nth-child(2) table td{border:none;}
+	#join_con > div:nth-child(2) table td:nth-child(1){ text-align:left;}
+	
+	#rank_con{width:100%; min-height:100px}
+	#rank_con > div:nth-child(1){text-align:center; margin-top:20px;}
+	#rank_con > div:nth-child(1) p{font-size:36px;}
+	
+	#rank_con > div:nth-child(2){text-align:center; margin-top:20px; font-size: 24px;}
+	#rank_con > div:nth-child(2) table{margin:0 auto; width:100%;}
+	#rank_con > div:nth-child(2) table tr:nth-child(3) td{ background:#FF0; color:#F00;}
+	
+	
+	
+	
+	#footer{width:100%; height:100px; margin-top:60px;}
+	
+.blue{color:#00F;}
+.red{color:#F00;}
+
+.m-styled-select { background:#fff; width: 200px; padding: 5px; font-size: 16px; line-height: 1; border: solid 1px #000; height: 34px;  }
+.m-styled-button{ background: #fff; padding: 5px; font-size: 16px;  height: 34px; border: solid 1px #000; cursor:pointer;}
+.m-styled-input{ background: #fff; padding: 5px; font-size: 16px;  height: 34px; border: solid 1px #000; width:800px;}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>지역 문화 교류 센타타타</title>
+	<link rel="stylesheet" type="text/css" href="./fontawesome/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<!-- 헤더 -->
+	<header>
+		<i id="menu-btn" class="fa fa-bars fa-lg pointer"></i>
+		<h1 id="logo">전남TUBE</h1>
+		<!-- 검색창 -->
+		<div id="search-wrap">
+			<div class="wrap">
+				<form action="./search.html">
+					<div class="input-wrap"><input type="text" name="search" id="search" placeholder="검색"></div>
+					<button type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<!-- 검색창 가릴시 -->
+		<div id="icons">
+			<a href="./search.html"><i id="search-open-btn" class="fa-lg fa fa-search"></i></a>
+			<input type="checkbox" hidden="" id="login-view">
+			<label id="login" for="login-view">로그인</label>
+			<!-- 비로그인시 -->
+			<div id="login-form" style="./*display: none;*/">
+				<form action="./index.html" method="post">
+					아이디<br/>
+					<input type="text" id="id" name="id"><br/>
+					비밀번호<br/>
+					<input type="password" id="pw" name="pw"><br/>
+					<button type="submit">로그인</button>
+				</form>
+			</div>
+			<a href="./register.html">
+				&nbsp;회원가입
+			</a>
+
+			<!-- 로그인시 -->
+			<a href="./upload.html"><i class="fa fa-upload fa-lg pointer"></i></a>
+			<a href="./alert.html"><i class="fa fa-bell fa-lg pointer"></i></a>
+			<input type="checkbox" hidden="" id="channel-view">
+			<label for="channel-view" class="user pointer" href="./channel.html" "><img src="./imgs/user.jpg"></label>
+			<div id="myInfo" style="./*display: none;*/">
+				<a class="link" href="./channel.html">논두렁 녹음러</a>
+				<a class="link" href="#" id="logout">로그아웃</a>
+				
+			</div>
+		</div>
+	</header>
+
+	<!-- 사이드 메뉴 -->
+	<aside id="side-menu">
+		<ul id="category">
+			<a href="./index.html"><li class="pointer"><i class="fa fa-fw fa-home fa-lg"></i>홈</li></a>
+			<a href="./fire.html"><li class="pointer"><i class="fa fa-fw fa-fire fa-lg"></i>인기 급상승 동영상</li></a>
+		</ul>
+		<ul id="user-list">
+			<a href="./recent.html"><li class="pointer"><i class="fa fa-fw fa-clock fa-lg"></i>최근 시청한 동영상</li></a>
+			<a href="#"><li class="pointer"><i class="fa fa-fw fa-list-ul fa-lg"></i>플레이리스트</li></a>
+		</ul>
+		<ul id="subscribes">
+			<span>구독</span>
+			<a href="./channel.html"><li class="pointer">
+				<div class="user">
+					<img src="./imgs/user.jpg">
+				</div>
+				전남도청
+			</li></a>
+			<a href="./channel.html"><li class="pointer">
+				<div class="user">
+					<img src="./imgs/user.jpg">
+				</div>
+				 여수엑스포
+			</li></a>
+		</ul>
+	</aside>
+	<!-- end -->
+	<!-- 메인 -->
+	<main id="main">
+		<div class="list">
+			<div class="videos">
+				<h2 class="main-title">구독한 채널 - 논두렁 녹음러</h2>
+				<div class="video">
+					<a href="./watch.html" class="pointer"><video width="210" height="120" preload="true" preload="metadata">
+						<source src="./videos/video.mp4" type="video/mp4">
+					</video></a>
+					<div class="text">
+						<h3>자연의 소리를 찾아서</h3>
+						<h4>논두렁 녹음러</h4>
+						<h5>죄회수 134회 · 2시간 전</h5>
+					</div>
+				</div>
+				<div class="video">
+					<a href="./watch.html" class="pointer"><video width="210" height="120" preload="true" preload="metadata">
+						<source src="./videos/video.mp4" type="video/mp4">
+					</video></a>
+					<div class="text">
+						<h3>자연의 소리를 찾아서</h3>
+						<h4>논두렁 녹음러</h4>
+						<h5>죄회수 134회 · 2시간 전</h5>
+					</div>
+				</div>
+				<div class="video">
+					<a href="./watch.html" class="pointer"><video width="210" height="120" preload="true" preload="metadata">
+						<source src="./videos/video.mp4" type="video/mp4">
+					</video></a>
+					<div class="text">
+						<h3>자연의 소리를 찾아서</h3>
+						<h4>논두렁 녹음러</h4>
+						<h5>죄회수 134회 · 2시간 전</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div class="videos">
+				<h2 class="main-title">새로 업로드된 동영상</h2>
+				<div class="video">
+					<a href="./watch.html" class="pointer"><video width="210" height="120" preload="true" preload="metadata">
+						<source src="./videos/video.mp4" type="video/mp4">
+					</video></a>
+					<div class="text">
+						<h3>자연의 소리를 찾아서</h3>
+						<h4>논두렁 녹음러</h4>
+						<h5>죄회수 134회 · 2시간 전</h5>
+					</div>
+				</div><div class="video">
+				<a href="./watch.html" class="pointer"><video width="210" height="120" preload="true" preload="metadata">
+					<source src="./videos/video.mp4" type="video/mp4">
+				</video></a>
+				<div class="text">
+					<h3>자연의 소리를 찾아서</h3>
+					<h4>논두렁 녹음러</h4>
+					<h5>죄회수 134회 · 2시간 전</h5>
+				</div>
+			</div><div class="video">
+				<a href="./watch.html" class="pointer"><video width="210" height="120" preload="true" preload="metadata">
+					<source src="./videos/video.mp4" type="video/mp4">
+				</video></a>
+				<div class="text">
+					<h3>자연의 소리를 찾아서</h3>
+					<h4>논두렁 녹음러</h4>
+					<h5>죄회수 134회 · 2시간 전</h5>
+				</div>
+			</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

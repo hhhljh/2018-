@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>지역 문화 교류 센타타타</title>
+	<link rel="stylesheet" type="text/css" href="./fontawesome/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<!-- 헤더 -->
+	<header>
+		<i id="menu-btn" class="fa fa-bars fa-lg pointer"></i>
+		<h1 id="logo">전남TUBE</h1>
+		<!-- 검색창 -->
+		<div id="search-wrap">
+			<div class="wrap">
+				<form action="./search.html">
+					<div class="input-wrap"><input type="text" name="search" id="search" placeholder="검색"></div>
+					<button type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<!-- 검색창 가릴시 -->
+		<div id="icons">
+			<a href="./search.html"><i id="search-open-btn" class="fa-lg fa fa-search"></i></a>
+			<input type="checkbox" hidden="" id="login-view">
+			<label id="login" for="login-view">로그인</label>
+			<!-- 비로그인시 -->
+			<div id="login-form" style="./*display: none;*/">
+				<form action="./index.html" method="post">
+					아이디<br/>
+					<input type="text" id="id" name="id"><br/>
+					비밀번호<br/>
+					<input type="password" id="pw" name="pw"><br/>
+					<button type="submit">로그인</button>
+				</form>
+			</div>
+			<a href="./register.html">
+				&nbsp;회원가입
+			</a>
+
+			<!-- 로그인시 -->
+			<a href="./upload.html"><i class="fa fa-upload fa-lg pointer"></i></a>
+			<a href="./alert.html"><i class="fa fa-bell fa-lg pointer"></i></a>
+			<input type="checkbox" hidden="" id="channel-view">
+			<label for="channel-view" class="user pointer" href="./channel.html" "><img src="./imgs/user.jpg"></label>
+			<div id="myInfo" style="./*display: none;*/">
+				<a class="link" href="./channel.html">논두렁 녹음러</a>
+				<a class="link" href="#" id="logout">로그아웃</a>
+				
+			</div>
+		</div>
+	</header>
+
+	<!-- 사이드 메뉴 -->
+	<aside id="side-menu">
+		<ul id="category">
+			<a href="./index.html"><li class="pointer"><i class="fa fa-fw fa-home fa-lg"></i>홈</li></a>
+			<a href="#"><li class="pointer"><i class="fa fa-fw fa-fire fa-lg"></i>인기 급상승 동영상</li></a>
+		</ul>
+		<ul id="user-list">
+			<a href="./recent.html"><li class="pointer"><i class="fa fa-fw fa-clock fa-lg"></i>최근 시청한 동영상</li></a>
+			<a href="#"><li class="pointer"><i class="fa fa-fw fa-list-ul fa-lg"></i>플레이리스트</li></a>
+		</ul>
+		<ul id="subscribes">
+			<span>구독</span>
+			<a href="./channel.html"><li class="pointer">
+				<div class="user">
+					<img src="./imgs/user.jpg">
+				</div>
+				전남도청
+			</li></a>
+			<a href="./channel.html"><li class="pointer">
+				<div class="user">
+					<img src="./imgs/user.jpg">
+				</div>
+				 여수엑스포
+			</li></a>
+		</ul>
+	</aside>
+	<!-- end -->
+	
+	<!-- 메인 -->
+	<form>
+	<main id="upload">
+		<h2>동영상 업로드</h2>
+		<div id="up-form">
+			<table>
+				<tbody>
+					<tr>
+						<td>동영상</td>
+						<td>
+							<input type="file" name="video" id="upload-video" accept="video/mp4">
+							<div></div>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<div id="progress"><div id="bar" style="width: 1%;"></div></div>
+						</td>
+						<td>100 / 300 MB</td>
+					</tr>
+					<tr>
+						<td>영상 썸네일</td>
+						<td>
+							<input type="file" name="thumbnail" accept="image/png, image/jpg, image/gif, image/jpeg">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>제목</td>
+						<td><input type="text" name="title" class="css-init"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>영상 설명</td>
+						<td><textarea name="text" class="css-init"></textarea></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>
+							<button type="submit" id="upload-btn" disabled="true" class="css-init pointer">업로드</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+	</form>
+	<script type="text/javascript">
+		function progress(percentage) {
+			$('#upload-video').get(0).disabled = true;
+			$('#bar').css({width:percentage+'%'},300);
+			if (percentage >= 100) {
+					$('#upload-video').get(0).disabled = false;
+					$('#upload-btn').get(0).disabled = false;
+			}
+		}
+
+		$('#upload-video').change((e)=>{
+			var input = $('#upload-video');
+			var file = input.get(0).files[0];
+			var name = input.val();
+			var formData = new FormData();
+			formData.append("file",file,file.name);
+// 여기부터 지우기
+			// var oldXHR = $.ajaxSettings.xhr;
+			// $.ajaxSettings.xhr = function() {
+			// 	var xhr = oldXHR.apply(this, arguments);
+			// 	if(xhr instanceof window.XMLHttpRequest) {
+			// 			xhr.addEventListener('progress', this.progress, false);
+			// 	}
+				
+			// 	if(xhr.upload) {
+			// 			xhr.upload.addEventListener('progress', this.progress, false);
+			// 	}
+			// 	return xhr;
+			// };
+
+			// $.ajax({
+			// 	url : '/video/preUpload',
+			// 	type: 'POST',
+			// 	data: formData,
+			// 	cache: false,
+			// 	processData:false,
+			// 	contentType: false,
+			// 	progress: function(e) {
+			// 		percentage = e.loaded / e.total * 100;
+			// 		progress(percentage);
+			// 	},
+			// 	success:function(filename) {
+			// 		console.log(filename);
+			// 	},
+			// 	error : function(err) {
+			// 		console.log('error: ',err.statusText);
+			// 	}
+			// });
+		});
+	</script>
+</body>
+</html>

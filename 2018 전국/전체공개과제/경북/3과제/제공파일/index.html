@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Travel Planner</title>
+<link href="asset/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="asset/css/common.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div>
+            <h2>My Travel Diary</h2>
+        </div>
+    </div>
+    
+    <!-- Content Section -->
+    <div class="container content">
+        <!-- Calendar Section -->
+        <div class="calDisp">
+            <input type="hidden" name="nowMonth" id="nowMonth" value="dd">
+            <div class="calTitle ui-widget-header">
+                <div class="calPrev">
+                    <span class="prev">Prev</span>
+                </div>
+                <div class="calNow">2018 Oct</div>
+                <div class="calNext">
+                    <span class="today">Today</span>
+                    <span class="next">Next</span>
+                </div>
+            </div>
+            <div style=" clear: both;"></div>
+
+            <div class="calContent">
+                <div class="ui-widget-header">
+                    <table id="calHeader">
+                        <thead>
+                            <tr>
+                                <th class="ui-widget-header">Sun</th>
+                                <th class="ui-widget-header">Mon</th>
+                                <th class="ui-widget-header">Tue</th>
+                                <th class="ui-widget-header">Wed</th>
+                                <th class="ui-widget-header">Thu</th>
+                                <th class="ui-widget-header">Fri</th>
+                                <th class="ui-widget-header">Sat</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="calTable">
+                    <!-- Calendar Table Section -->
+                        <table>
+                            <tbody>
+                                <td class="ui-widget-content">
+                                    <div class="fc-bg"></div>
+                                    <div class="fc-content-skeleton">　</div>
+                                </td>
+                                <td class="ui-widget-content cals">
+                                    <span class="fc-day-number">　</span>
+                                </td>
+                                <td class="ui-widget-content cals">
+                                    <span class="fc-day-number">　</span>
+                                </td>
+                                <td class="ui-widget-content cals">
+                                    <span class="fc-day-number">1</span>
+                                </td>
+                                <td class="ui-widget-content cals">
+                                    <span class="fc-day-number">2</span>
+                                </td>
+                                <td class="ui-widget-content cals">
+                                    <span class="fc-day-number">3</span>
+                                </td>
+                                <td class="ui-widget-content cals">
+                                    <span class="fc-day-number">4</span>
+                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Calendar Section -->
+        
+        <!-- Schedule Section -->
+        <div class="schedule">
+            <div class="selBox">
+                <span>스케쥴 선택 : </span>
+                <select name="selChoice">
+                    <option value="day">day</option>
+                    <option value="week">week</option>
+                    <option value="custom">custom</option>
+                </select>
+
+                <form action="" class="searchForm">
+                    <input type="text" name="search" id="search" placeholder="Search">
+                    <button name="searchBtn" id="searchBtn" class="searchBtn">Search</button>
+                </form>
+
+                <button name="scWriteBtn" id="scWriteBtn" class="scWriteBtn">등록</button>
+            </div>
+
+            <div class="scContent">
+                <!-- Content Section -->
+
+                <!-- 데이터가 있을 때 시간 또는 날짜 태그 형식  -->
+                <ul style="margin:5px 10px">
+                    <li>
+                        <div class="timetag daytag tags">10시 </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="" alt="image">
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+
+                <!-- week 데이터가 없을 때 -->
+                <ul style="margin:5px 10px">
+                    <li>
+                        <div class="daytag">10월 04일</div>
+                    </li>
+                    <li>
+                        <div class="card">데이터 없음
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+
+                <!-- 검색 데이터가 없을 때 -->
+                <ul style="margin:5px 10px">
+                    <li>
+                        <div class="tag">검색결과</div>
+                    </li>
+                    <li>
+                        <div class="card">일치하는 검색 결과가 없습니다.</div>
+                    </li>
+                </ul>
+
+                <!-- 갤러리 모양 -->
+                <div class="column-schedule">
+                    <div class="card shadow">
+                        <div class="tag">
+                                <img src="" alt="image">
+                        </div>
+                        <ul class="contents">
+                            <li class="title">여행지 :</li>
+                            <li class="viewText">&nbsp;</li>
+                            <li class="title">여행일자 :</li>
+                            <li class="viewText">&nbsp;</li>
+                            <li class="title">여행시간 :</li>
+                            <li class="viewText">&nbsp;</li>
+                            <li class="title">여행스케치 :</li>
+                            <li class="viewText">&nbsp;</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- Schedule Section -->
+    </div>
+    <!--  End Main Page -->
+    
+    <!-- Script -->
+    <script type="text/javascript" src="asset/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="asset/js/common.js"></script>
+    <!-- end Script -->
+</body>
+</html>

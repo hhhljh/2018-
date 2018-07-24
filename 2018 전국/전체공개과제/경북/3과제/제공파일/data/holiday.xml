@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<place>
+	<type name="National">
+		<data>
+			<title>3.1절</title>
+			<date>03-01</date>
+		</data>
+		<data>
+			<title>제헌절</title>
+			<date>07-17</date>
+		</data>
+		<data>
+			<title>개천절</title>
+			<date>10-03</date>
+		</data>
+		<data>
+			<title>광복절</title>
+			<date>08-15</date>
+		</data>
+	</type>
+	<type name="Public">
+		<data>
+			<title>신정</title>
+			<date>01-01</date>
+		</data>
+		<data>
+			<title>식목일</title>
+			<date>04-05</date>
+		</data>
+		<data>
+			<title>어린이날</title>
+			<date>05-05</date>
+		</data>
+		<data>
+			<title>현충일</title>
+			<date>06-06</date>
+		</data>
+		<data>
+			<title>크리스마스</title>
+			<date>12-25</date>
+		</data>
+		<data>
+			<title>today</title>
+			<date>10-25</date>
+		</data>
+	</type>
+</place>

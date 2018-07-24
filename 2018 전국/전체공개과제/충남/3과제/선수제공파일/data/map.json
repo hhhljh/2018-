@@ -1,0 +1,406 @@
+[
+    {
+        "nav" : [
+        {
+            "num" : "1",
+            "start" : "동성주유소",
+            "end" : "여천동 주민센터",
+            "speed" : "60km",
+            "distance" : "1440m",
+            "time" : "4분"
+        },  
+        {
+            "num" : "2",
+            "start" : "여천동 주민센터",
+            "end" : "동성주유소",
+            "speed" : "60km",
+            "distance" : "1440m",
+            "time" : "4분"
+        },
+        {
+            "num" : "3",
+            "start" : "여천동 주민센터",
+            "end" : "통뼈감자탕 무선점",
+            "speed" : "60km",
+            "distance" : "423m",
+            "time" : "1분"
+        },
+        {
+            "num" : "4",
+            "start" : "통뼈감자탕 무선점",
+            "end" : "여천동 주민센터",
+            "speed" : "60km",
+            "distance" : "423m",
+            "time" : "1분"
+        },
+        {
+            "num" : "5",
+            "start" : "통뼈감자탕 무선점",
+            "end" : "동성주유소",
+            "speed" : "60km",
+            "distance" : "674m",
+            "time" : "2분"
+        },
+        {
+            "num" : "6",
+            "start" : "동성주유소",
+            "end" : "통뼈감자탕 무선점",
+            "speed" : "60km",
+            "distance" : "674m",
+            "time" : "2분"
+        },
+        {
+            "num" : "7",
+            "start" : "동성주유소",
+            "end" : "신동아 아파트 앞 삼거리",
+            "speed" : "60km",
+            "distance" : "631m",
+            "time" : "1분"
+        },
+        {
+            "num" : "8",
+            "start" : "신동아 아파트 앞 삼거리",
+            "end" : "동성주유소",
+            "speed" : "60km",
+            "distance" : "1440m",
+            "time" : "4분"
+        },
+        {
+            "num" : "9",
+            "start" : "신동아 아파트 앞 삼거리",
+            "end" : "쌍봉사거리",
+            "speed" : "60km",
+            "distance" : "606m",
+            "time" : "2분"
+        },
+        {
+            "num" : "10",
+            "start" : "쌍봉사거리",
+            "end" : "신동아 아파트 앞 삼거리",
+            "speed" : "60km",
+            "distance" : "579m",
+            "time" : "2분"
+        },
+        {
+            "num" : "11",
+            "start" : "신동아 아파트 앞 삼거리",
+            "end" : "도원사거리",
+            "speed" : "60km",
+            "distance" : "601m",
+            "time" : "2분"
+        },
+        {
+            "num" : "12",
+            "start" : "도원사거리",
+            "end" : "신동아 아파트 앞 삼거리",
+            "speed" : "60km",
+            "distance" : "601m",
+            "time" : "2분"
+        },
+        {
+            "num" : "13",
+            "start" : "도원사거리",
+            "end" : "도원주유소",
+            "speed" : "60km",
+            "distance" : "880m",
+            "time" : "3분"
+        },
+        {
+            "num" : "14",
+            "start" : "도원주유소",
+            "end" : "도원사거리",
+            "speed" : "60km",
+            "distance" : "880m",
+            "time" : "3분"
+        },
+        {
+            "num" : "15",
+            "start" : "도원사거리",
+            "end" : "장성삼거리",
+            "speed" : "60km",
+            "distance" : "615m",
+            "time" : "3분"
+        },
+        {
+            "num" : "16",
+            "start" : "장성삼거리",
+            "end" : "도원사거리",
+            "speed" : "60km",
+            "distance" : "615m",
+            "time" : "3분"
+        },
+        {
+            "num" : "17",
+            "start" : "장성삼거리",
+            "end" : "용기공원",
+            "speed" : "60km",
+            "distance" : "558m",
+            "time" : "2분"
+        },
+        {
+            "num" : "18",
+            "start" : "용기공원",
+            "end" : "장성삼거리",
+            "speed" : "60km",
+            "distance" : "475m",
+            "time" : "2분"
+        },
+        {
+            "num" : "19",
+            "start" : "용기공원",
+            "end" : "부영 3단지 사거리",
+            "speed" : "60km",
+            "distance" : "858m",
+            "time" : "4분"
+        },
+        {
+            "num" : "20",
+            "start" : "부영 3단지 사거리",
+            "end" : "용기공원",
+            "speed" : "60km",
+            "distance" : "824m",
+            "time" : "3분"
+        },
+        {
+            "num" : "21",
+            "start" : "용기공원",
+            "end" : "광금당",
+            "speed" : "60km",
+            "distance" : "474m",
+            "time" : "2분"
+        },
+        {
+            "num" : "22",
+            "start" : "광금당",
+            "end" : "용기공원",
+            "speed" : "60km",
+            "distance" : "474m",
+            "time" : "2분"
+        },
+        {
+            "num" : "23",
+            "start" : "도원사거리",
+            "end" : "시청 앞 로타리",
+            "speed" : "60km",
+            "distance" : "606m",
+            "time" : "2분"
+        },
+        {
+            "num" : "24",
+            "start" : "시청 앞 로타리",
+            "end" : "도원사거리",
+            "speed" : "60km",
+            "distance" : "606m",
+            "time" : "2분"
+        },
+        {
+            "num" : "25",
+            "start" : "부영 3단지 사거리",
+            "end" : "시청 앞 로타리",
+            "speed" : "60km",
+            "distance" : "192m",
+            "time" : "1분"
+        },
+        {
+            "num" : "26",
+            "start" : "시청 앞 로타리",
+            "end" : "광금당",
+            "speed" : "60km",
+            "distance" : "248m",
+            "time" : "1분"
+        },
+        {
+            "num" : "31",
+            "start" : "광금당",
+            "end" : "부영 3단지 사거리",
+            "speed" : "60km",
+            "distance" : "363m",
+            "time" : "2분"
+        },
+        {
+            "num" : "28",
+            "start" : "국민은행 앞 교차로",
+            "end" : "시청 앞 로타리",
+            "speed" : "60km",
+            "distance" : "363m",
+            "time" : "2분"
+        },
+        {
+            "num" : "29",
+            "start" : "쌍봉사거리",
+            "end" : "국민은행 앞 교차로",
+            "speed" : "60km",
+            "distance" : "284m",
+            "time" : "1분"
+        },
+        {
+            "num" : "30",
+            "start" : "국민은행 앞 교차로",
+            "end" : "쌍봉사거리",
+            "speed" : "60km",
+            "distance" : "284m",
+            "time" : "1분"
+        },
+        {
+            "num" : "27",
+            "start" : "국민은행 앞 교차로",
+            "end" : "시청 앞 로타리",
+            "speed" : "60km",
+            "distance" : "428m",
+            "time" : "2분"
+        },
+        {
+            "num" : "32",
+            "start" : "국민은행 앞 교차로",
+            "end" : "흥국실내체육관 앞 사거리",
+            "speed" : "60km",
+            "distance" : "623m",
+            "time" : "2분"
+        },
+        {
+            "num" : "33",
+            "start" : "흥국실내체육관 앞 사거리",
+            "end" : "국민은행 앞 교차로",
+            "speed" : "60km",
+            "distance" : "623m",
+            "time" : "2분"
+        },
+        {
+            "num" : "34",
+            "start" : "흥국실내체육관 앞 사거리",
+            "end" : "부영 3단지 사거리",
+            "speed" : "60km",
+            "distance" : "357m",
+            "time" : "1분"
+        },
+        {
+            "num" : "35",
+            "start" : "부영 3단지 사거리",
+            "end" : "흥국실내체육관 앞 사거리",
+            "speed" : "60km",
+            "distance" : "357m",
+            "time" : "1분"
+        },
+        {
+            "num" : "36",
+            "start" : "부영 3단지 사거리",
+            "end" : "롯데첨단소재 사택 앞",
+            "speed" : "60km",
+            "distance" : "671m",
+            "time" : "3분"
+        },
+        {
+            "num" : "37",
+            "start" : "롯데첨단소재 사택 앞",
+            "end" : "부영 3단지 사거리",
+            "speed" : "60km",
+            "distance" : "671m",
+            "time" : "3분"
+        },
+        {
+            "num" : "38",
+            "start" : "롯데첨단소재 사택 앞",
+            "end" : "시전삼거리",
+            "speed" : "60km",
+            "distance" : "671m",
+            "time" : "3분"
+        },
+        {
+            "num" : "39",
+            "start" : "시전삼거리",
+            "end" : "롯데첨단소재 사택 앞",
+            "speed" : "60km",
+            "distance" : "671m",
+            "time" : "3분"
+        },
+        {
+            "num" : "40",
+            "start" : "흥국실내체육관 앞 사거리",
+            "end" : "시전삼거리",
+            "speed" : "60km",
+            "distance" : "468m",
+            "time" : "2분"
+        },
+        {
+            "num" : "41",
+            "start" : "시전삼거리",
+            "end" : "흥국실내체육관 앞 사거리",
+            "speed" : "60km",
+            "distance" : "468m",
+            "time" : "2분"
+        },
+        {
+            "num" : "42",
+            "start" : "흥국실내체육관 앞 사거리",
+            "end" : "원학동삼거리",
+            "speed" : "60km",
+            "distance" : "367m",
+            "time" : "3분"
+        },
+        {
+            "num" : "43",
+            "start" : "원학동삼거리",
+            "end" : "흥국실내체육관 앞 사거리",
+            "speed" : "60km",
+            "distance" : "367m",
+            "time" : "3분"
+        },
+        {
+            "num" : "44",
+            "start" : "신기삼거리",
+            "end" : "쌍봉사거리",
+            "speed" : "60km",
+            "distance" : "1050m",
+            "time" : "5분"
+        },
+        {
+            "num" : "45",
+            "start" : "원학동삼거리",
+            "end" : "신기삼거리",
+            "speed" : "60km",
+            "distance" : "646m",
+            "time" : "2분"
+        },
+        {
+            "num" : "46",
+            "start" : "신기삼거리",
+            "end" : "시전삼거리",
+            "speed" : "60km",
+            "distance" : "1050m",
+            "time" : "5분"
+        },
+        {
+            "num" : "47",
+            "start" : "신기삼거리",
+            "end" : "시전삼거리",
+            "speed" : "60km",
+            "distance" : "1050m",
+            "time" : "5분"
+        },
+        {
+            "num" : "48",
+            "start" : "쌍봉사거리",
+            "end" : "원학동삼거리",
+            "speed" : "60km",
+            "distance" : "646m",
+            "time" : "2분"
+        },
+        {
+            "num" : "49",
+            "start" : "쌍봉사거리",
+            "end" : "영토건설",
+            "speed" : "60km",
+            "distance" : "1360m",
+            "time" : "6분"
+        },
+        {
+            "num" : "50",
+            "start" : "영토건설",
+            "end" : "쌍봉사거리",
+            "speed" : "60km",
+            "distance" : "1360m",
+            "time" : "6분"
+        }
+        ]
+    }
+]
