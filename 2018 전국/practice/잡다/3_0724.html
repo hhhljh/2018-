@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<title>0724</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<style>
+	body{background:rgba(0,0,0,.6);margin:0;}
+	.round{background:#fff;width:20px;height:20px;border-radius:50%;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	// var arr = ['go','to','succced']
+	// for (var i =0, len = arr.length; i < len; i++){
+	// 	var item = arr[i];
+	// 	console.log(i, item);
+	// }
+	// $.each(arr, function (index, item){
+	// 	console.log(index, item);
+	// })
+
+	var arr = ['1', '2', '3']
+	var newArr = $.map(arr, function(item) {
+		return item*2;
+	});
+	console.log(newArr);
+</script>
+
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+</body>
+</html>
