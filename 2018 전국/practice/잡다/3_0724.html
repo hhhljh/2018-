@@ -20,16 +20,22 @@
 	// 	console.log(index, item);
 	// })
 
-	var arr = ['1', '2', '3']
-	var newArr = $.map(arr, function(item) {
-		return item*2;
-	});
-	console.log(newArr);
+	// var arr = ['1', '2', '3']
+	// var newArr = $.map(arr, function(item) {
+	// 	return item*2;
+	// });
+	// console.log(newArr);
+
+	// var arr= ['a', 'b', 'c']
+	// arr.forEach (function (value, index){
+	// 	console.log(value,index ,index*2)
+	// })
+
+	var arr = ['첫번째', '두번째', '세번째', '네번째', '다섯번째', '여섯번째'];
+	const result = arr.filter(word => word.length > 6);
+	console.log(result);
 </script>
 
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
 <div class="round"></div>
 </body>
 </html>
