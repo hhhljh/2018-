@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Falling Snow</title>
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<style>
+	body{background:rgba(0,0,0,0.7);}
+	.snow{background:#fff;border-radius:50%;position:fixed;width:20px;height:20px;left:inherit;}
+	.fall{animation: fall 2s infinite linear;}
+	@keyframes fall {
+		0% {top:0%;}
+		100% {top:100%;}
+	}
+</style>
+<body>
+<script type="text/javascript">
+	function snowFall (){
+			for(var j = 1; j <= 50; j++){
+				var template = '<div class="snow fall snow'+(j)+'"></div>'
+				var randX = parseInt((Math.random()*1600));
+				if(j<=25){
+					var randY = parseInt((Math.random()*1000));
+				} else if(j>25){
+					var randY = parseInt((Math.random()*1000))*-1;
+				}
+				$("style").append('.snow'+j+'{left:'+randX+'px;transform:translateY('+randY+'px);}')	 
+				$("body").append(template);
+			}
+		}
+	$(snowFall)
+	// function SnowFall(){
+	// 	setInternal(function(){
+	// 		$(".snow").addClass("fall")
+	// 		$(".snow").css({
+	// 			left:
+	// 		})
+	// 	})
+	// }
+	
+	// window.requestAnimationFrame(snowFall);
+	// var rw, rh = Math.floor(Math.random()*100) + 1;
+	// $(".snow").css({
+	// 	width:rw+"%",
+	// 	height:rh+"%"
+	// })
+
+</script>
+</body>
+</html>
