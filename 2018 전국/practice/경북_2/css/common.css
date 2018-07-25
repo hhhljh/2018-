@@ -1,0 +1,80 @@
+*{margin:0;padding:0;}
+ul, li{list-style:none;}
+
+#header{width:100%;height:145px;position: relative;}
+.up{width:100%;height:50px;background:#1f273a;}
+.up>div{width:1200px;height:50px;display:flex;justify-content:space-between;color:#fff;margin:0 auto;}
+.sns{line-height:50px;}
+.sns>i{font-size:20px;margin-right:15px;transition:.3s}
+.sns>i:nth-child(1){color:#e4012e;}
+.thing{display:flex;position: relative;}
+.thing i{line-height:50px;margin-right:3px;margin-top:2px;}
+.thing h3{font-size:17px;font-weight:400;margin-right:25px;line-height:50px;}
+.thing h3:nth-child(3){margin-right:0px;}
+.thing>div{transition:.3s;display:flex;}
+.thing>div:hover{color:#e4012e;}
+.down{width:100%;height:95px;background:#fff;}
+.down>div{width:1200px;height:95px;display:flex;justify-content:space-between;margin:0 auto;}
+.logo{font-size:25px;color:#000;line-height:95px;font-weight:600;}
+.logo:hover{cursor:pointer;}
+.logo strong{color:#e4012e;}
+.menu ul{display:flex;margin-top:25px;}
+.menu li{font-size:14px;padding:15px 20px;transition:.5s}
+.menu li:nth-child(1){background:#e4012e;color:#fff;}
+.menu li:hover{background:#e4012e;color:#fff;}
+.sns i:hover{color:#e4012e;}
+
+#slide{width:100%;height:600px;position: relative;}
+#slide input{position: absolute;bottom:0;}
+#slide ul{display:flex;flex-wrap:wrap;width:500%;height:600px;}
+#slide li{background:no-repeat center / cover;width:20%;height:100%;}
+#slide li:nth-child(1){background-image:url(../images/visual1.png)}
+#slide li:nth-child(2){background-image:url(../images/visual2.png)}
+#slide li:nth-child(3){background-image:url(../images/visual3.png)}
+#slide li:nth-child(4){background-image:url(../images/visual4.png)}
+#slide li:nth-child(5){background-image:url(../images/visual5.png)}
+.upper{position: absolute;top:0;bottom:0;right:0;left:0;}
+.white{width:1200px;height:200px;background:rgba(255,255,255,.7);position: absolute;bottom:0;left:calc(50% - 600px);text-align: center;}
+.white h3{font-size:30px;margin:40px 0 30px;}
+.white p{font-size:20px;color:#e4012e;}
+.arrow{position: absolute;top:calc(50% - 40px);width:35px;height:60px;z-index:10;}
+.arrow label{position: absolute;top:calc(50% - 40px);}
+.arrow i{color:rgba(255,255,255,.8);font-size:80px;position: absolute;top:calc(50% - 40px);}
+.arrow.left{left:260px;}
+.arrow.right{right:260px;}
+
+#main{width:1200px;height:1000px;margin:0 auto;}
+.main1{width:100%;height:1000px;margin:10px;}
+.title{margin:40px 0;height:100px;display:flex;width:150px;}
+.title h3{line-height:100px;font-size:25px;}
+.title>div{width:7px;height:35px;background:#e4012e;margin-top:32px;margin-right:5px;}
+.flex{width:1200px;height:797px;display:flex;flex-wrap:wrap;justify-content:space-between;}
+.things{width:280px;height:370px;position: relative;transition:.5s;}
+.wrapped{position: absolute;top:0;bottom:0;left:0;right:0;background:rgba(228,1,46,.35);transition: .5s;}
+.txt{position: absolute;color:#fff;margin:40px 20px;text-align: center;top:0;}
+.utod{transform:translateY(-50px);transition:.4s}
+.btn{transform:translateY(50px);transition:.4s}
+.txt h3{font-weight:600;font-size:25px;margin:15px 0;margin-top:30px;}
+.txt p{font-size:17px;line-height:120%;margin-top:20px;}
+.txt .btn{width:33.3%;height:30px;margin:0 auto;border:4px double #fff;border-radius:5px;line-height:30px;margin-top:30px;font-size:13px;}
+.wrapped,
+.txt{opacity: 0;}
+.things:hover{cursor:pointer;}
+.things:hover .wrapped{opacity:1;}
+.things:hover .txt{opacity:1;}
+.things:hover .txt .utod{opacity:1;transform:inherit;}
+.things:hover .txt .btn{opacity:1;transform:inherit;}
+.btn:hover{background:rgba(228,1,46,.8);}
+
+#footer{width:100%;height:450px;background:#1f273a;color:#fff;}
+.loca{width:100%;height:400px;display:flex;}
+.loca .map{width:50%;height:100%;}
+.loca .map img{width:100%;height:100%;}
+.info{padding:45px 60px;width:50%;height:310px;}
+.thi{display:flex;margin-bottom:35px;}
+.thi i{font-size:45px;color:#e4012e;}
+.thi:nth-child(1) i{margin-left:3px;}
+.thi:nth-child(2) i{margin-left:-10px;}
+.thi>div{margin-left:30px;text-align: left;}
+.thi h3{font-size:20px;font-weight:600;}
+.copy{background:#1f273a;color:#fff;text-align: center;height:50px;line-height:50px;}
