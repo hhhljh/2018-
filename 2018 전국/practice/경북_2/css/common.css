@@ -25,23 +25,59 @@ ul, li{list-style:none;}
 .sns i:hover{color:#e4012e;}
 
 #slide{width:100%;height:600px;position: relative;}
-#slide input{position: absolute;bottom:0;}
+#slide .input{position: fixed;z-index:80;display:flex;width:500px;}
 #slide ul{display:flex;flex-wrap:wrap;width:500%;height:600px;}
-#slide li{background:no-repeat center / cover;width:20%;height:100%;}
-#slide li:nth-child(1){background-image:url(../images/visual1.png)}
-#slide li:nth-child(2){background-image:url(../images/visual2.png)}
-#slide li:nth-child(3){background-image:url(../images/visual3.png)}
-#slide li:nth-child(4){background-image:url(../images/visual4.png)}
-#slide li:nth-child(5){background-image:url(../images/visual5.png)}
-.upper{position: absolute;top:0;bottom:0;right:0;left:0;}
+#slide li{background:no-repeat center / cover;width:100%;height:100%;position: absolute;top:0;bottom:0;right:0;left:0;}
+#slide li:nth-child(1){background-image:url(../images/visual1.png);z-index:50;}
+#slide li:nth-child(2){background-image:url(../images/visual2.png);z-index:40;}
+#slide li:nth-child(3){background-image:url(../images/visual3.png);z-index:30;}
+#slide li:nth-child(4){background-image:url(../images/visual4.png);z-index:20;}
+#slide li:nth-child(5){background-image:url(../images/visual5.png);z-index:10;}
+.upper{position: absolute;top:0;bottom:0;right:0;left:0;z-index:60;}
 .white{width:1200px;height:200px;background:rgba(255,255,255,.7);position: absolute;bottom:0;left:calc(50% - 600px);text-align: center;}
 .white h3{font-size:30px;margin:40px 0 30px;}
 .white p{font-size:20px;color:#e4012e;}
-.arrow{position: absolute;top:calc(50% - 40px);width:35px;height:60px;z-index:10;}
-.arrow label{position: absolute;top:calc(50% - 40px);}
-.arrow i{color:rgba(255,255,255,.8);font-size:80px;position: absolute;top:calc(50% - 40px);}
+.arrow{position: relative;top:calc(50% - 40px);width:35px;height:60px;z-index:10;display:inline-block;}
+.arrow label{position: absolute;top:0;bottom:0;left:0;right:0;}
+.arrow i{color:rgba(255,255,255,.8);font-size:80px;position: absolute;top:10px;}
 .arrow.left{left:260px;}
-.arrow.right{right:260px;}
+.arrow.right{left:calc(260px + 1200px + 80px);}
+
+#pos1:checked ~ .slide ul{margin-left:-100%;}
+#pos2:checked ~ .slide ul{margin-left:-200%;}
+#pos3:checked ~ .slide ul{margin-left:-300%;}
+#pos4:checked ~ .slide ul{margin-left:-400%;}
+#pos5:checked ~ .slide ul{margin-left:-500%;}
+
+#pos1:checked ~ .upper .arrow i label:nth-child(1){z-index:0;}
+#pos1:checked ~ .upper .arrow i label:nth-child(2){z-index:0;}
+#pos1:checked ~ .upper .arrow i label:nth-child(3){z-index:0;}
+#pos1:checked ~ .upper .arrow i label:nth-child(4){z-index:0;}
+#pos1:checked ~ .upper .arrow i label:nth-child(5){z-index:50;}
+
+#pos2:checked ~ .upper .arrow i label:nth-child(1){z-index:0;}
+#pos2:checked ~ .upper .arrow i label:nth-child(2){z-index:0;}
+#pos2:checked ~ .upper .arrow i label:nth-child(3){z-index:0;}
+#pos2:checked ~ .upper .arrow i label:nth-child(4){z-index:50;}
+#pos2:checked ~ .upper .arrow i label:nth-child(5){z-index:0;}
+
+#pos3:checked ~ .upper .arrow i label:nth-child(1){z-index:0;}
+#pos3:checked ~ .upper .arrow i label:nth-child(2){z-index:0;}
+#pos3:checked ~ .upper .arrow i label:nth-child(3){z-index:50;}
+#pos3:checked ~ .upper .arrow i label:nth-child(4){z-index:0;}
+#pos3:checked ~ .upper .arrow i label:nth-child(5){z-index:0;}
+
+#pos4:checked ~ .upper .arrow i label:nth-child(1){z-index:0;}
+#pos4:checked ~ .upper .arrow i label:nth-child(2){z-index:50;}
+#pos4:checked ~ .upper .arrow i label:nth-child(3){z-index:0;}
+#pos4:checked ~ .upper .arrow i label:nth-child(4){z-index:0;}
+#pos4:checked ~ .upper .arrow i label:nth-child(5){z-index:0;}
+
+#pos4:checked ~ .upper .arrow i label:nth-child(1){z-index:50;}
+#pos4:checked ~ .upper .arrow i label:nth-child(2){z-index:0;}
+#pos4:checked ~ .upper .arrow i label:nth-child(3){z-index:0;}
+#pos4:checked ~ .upper .arrow i label:nth-child(4){z-index:0;}
+#pos4:checked ~ .upper .arrow i label:nth-child(5){z-index:0;}
 
 #main{width:1200px;height:1000px;margin:0 auto;}
 .main1{width:100%;height:1000px;margin:10px;}
