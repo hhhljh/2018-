@@ -1,0 +1,32 @@
+*{margin:0;padding:0;}
+ul, li{list-style:none;}
+body{font-size:15px;background:url(./bg.png);}
+span{display:inline;}
+
+:root {
+	--x:skewX(-45deg);
+	--y:skewY(-45deg);
+}
+
+.wrap{padding:200px 300px;background:rgba(0,0,0,.1);}
+.container{position: relative;display:inline-block;margin:20px 0 0 30px;    background-image: -webkit-linear-gradient(left , rgba(255, 255, 255, .35) 100%, transparent 100%);font-size: 30px;width:700px;height:500px;display:flex;just}
+.container:before,
+.container:after{content:"";position:absolute;background:#000;}
+.container:before{transform:var(--x);width:100%;height:2.5em;bottom:-2.5em;left:-1.25em;opacity:0.3;}
+.container:after{transform:var(--y);width:2.5em;height:100%;bottom:-1.25em;left:-2.5em;opacity:0.2;}
+
+.box1 .inner{height:10em;}
+.box3 .inner{height:14em;}
+
+.container li{margin:20px 0 20px 40px;position: relative; width:180px;}
+.back{position: absolute;font-size:18px;background:rgba(0,0,0,20,.18);display:inline-block;height:23em;width:8em;bottom:-1.25em;left:-2.5em;}
+.back:before{position: absolute;background:rgba(0,0,0,.1);transform:var(--x);width:100%;height:2.5em;content:"";bottom:-2.5em;left:-1.25em;}
+.back:after{position: absolute;background:rgba(0,0,0,.03);transform:var(--y);width:2.5em;height:100%;content:"";bottom:-1.25em;left:-2.5em;}
+.front{position: absolute;font-size:18px;background:rgba(0,0,0,.15);width:8em;height:23em;left:-5em;bottom:-3.75em;}
+.front:before{position: absolute;background:rgba(0,0,0,.2);transform:var(--y);width:2.5em;height:100%;content:"";bottom:1.25em;right:-2.5em;}
+.front:after{position: absolute;background:rgba(0,0,0,.18);transform:var(--x);width:100%;height:2.5em;content:"";top:-2.5em;right:-1.25em;}
+.inner{position: absolute;font-size:18px;background:rgba(92,138,162,.9);width:8em;height:15em;bottom:-3.75em;left:-5em;}
+.inner:before,
+.inner:after{position: absolute;content:"";}
+.inner:before{background:rgba(92,138,162,.9);transform:var(--x);width:100%;height:2.5em;right:-1.25em;top:-2.5em;}
+.inner:after{background:rgba(92,138,162,.9);transform:var(--y);width:2.5em;height:100%;right:-2.5em;top:-1.25em;}
