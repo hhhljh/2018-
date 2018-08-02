@@ -106,15 +106,15 @@ a{text-decoration:none;color:inherit;}
 .fmar>.mini:nth-child(4){left:calc(75%);}
 .part{width:1000px;height:500px;position: relative;margin:30px;}
 .part>div{width:1000px;height:500px;position: absolute;box-shadow:0px 0px 15px 2px #dadada;transition:.4s;}
- #pos1:checked ~ .part>div:nth-child(1){z-index:20;}
+#pos1:checked ~ .part>div:nth-child(1){z-index:20;}
 #pos2:checked ~ .part>div:nth-child(2){z-index:20;}
 #pos3:checked ~ .part>div:nth-child(3){z-index:20;}
 #pos4:checked ~ .part>div:nth-child(4){z-index:20;}
- #pos1:checked ~ .mark .fmar .mini:nth-child(1) .cir{transform:translateY(20px);}
+#pos1:checked ~ .mark .fmar .mini:nth-child(1) .cir{transform:translateY(20px);}
 #pos2:checked ~ .mark .fmar .mini:nth-child(2) .cir{transform:translateY(20px);}
 #pos3:checked ~ .mark .fmar .mini:nth-child(3) .cir{transform:translateY(20px);}
 #pos4:checked ~ .mark .fmar .mini:nth-child(4) .cir{transform:translateY(20px);}
- #pos1:checked ~ .mark .fmar .mini:nth-child(1) .tri{transform:translateY(0px) rotate(180deg) scaleX(.7);}
+#pos1:checked ~ .mark .fmar .mini:nth-child(1) .tri{transform:translateY(0px) rotate(180deg) scaleX(.7);}
 #pos2:checked ~ .mark .fmar .mini:nth-child(2) .tri{transform:translateY(0px) rotate(180deg) scaleX(.7);}
 #pos3:checked ~ .mark .fmar .mini:nth-child(3) .tri{transform:translateY(0px) rotate(180deg) scaleX(.7);}
 #pos4:checked ~ .mark .fmar .mini:nth-child(4) .tri{transform:translateY(0px) rotate(180deg) scaleX(.7);}
@@ -254,7 +254,7 @@ a{text-decoration:none;color:inherit;}
 .modal_layer .modal{width:60%;height:70%;background:#fff;margin:0 auto;position: relative;}
 .modal_layer .modal>a{position: absolute;top:30px;right:30px;}
 .slide .image > div div{position:absolute;width:400%;height:300%;background:no-repeat center /cover;}
- .slide .img1 .piece1 div{background: url(../image/img1.jpg); left:0; top:0; }
+.slide .img1 .piece1 div{background: url(../image/img1.jpg); left:0; top:0; }
 .slide .img1 .piece2 div{background: url(../image/img1.jpg); left:-100%; top:0; }
 .slide .img1 .piece3 div{background: url(../image/img1.jpg); left:-200%; top:0; }
 .slide .img1 .piece4 div{background: url(../image/img1.jpg); left:-300%; top:0; }
@@ -266,7 +266,7 @@ a{text-decoration:none;color:inherit;}
 .slide .img1 .piece10 div{background: url(../image/img1.jpg); left:-100%; top:-200%; }
 .slide .img1 .piece11 div{background: url(../image/img1.jpg); left:-200%; top:-200%; }
 .slide .img1 .piece12 div{background: url(../image/img1.jpg); left:-300%; top:-200%; }
- .slide .img2 .piece1 div{background: url(../image/img2.jpg); left:0; top:0; }
+.slide .img2 .piece1 div{background: url(../image/img2.jpg); left:0; top:0; }
 .slide .img2 .piece2 div{background: url(../image/img2.jpg); left:-100%; top:0; }
 .slide .img2 .piece3 div{background: url(../image/img2.jpg); left:-200%; top:0; }
 .slide .img2 .piece4 div{background: url(../image/img2.jpg); left:-300%; top:0; }
@@ -278,7 +278,7 @@ a{text-decoration:none;color:inherit;}
 .slide .img2 .piece10 div{background: url(../image/img2.jpg); left:-100%; top:-200%; }
 .slide .img2 .piece11 div{background: url(../image/img2.jpg); left:-200%; top:-200%; }
 .slide .img2 .piece12 div{background: url(../image/img2.jpg); left:-300%; top:-200%; }
- .slide .img3 .piece1 div{background: url(../image/img3.jpg); left:0; top:0; }
+.slide .img3 .piece1 div{background: url(../image/img3.jpg); left:0; top:0; }
 .slide .img3 .piece2 div{background: url(../image/img3.jpg); left:-100%; top:0; }
 .slide .img3 .piece3 div{background: url(../image/img3.jpg); left:-200%; top:0; }
 .slide .img3 .piece4 div{background: url(../image/img3.jpg); left:-300%; top:0; }
@@ -290,6 +290,7 @@ a{text-decoration:none;color:inherit;}
 .slide .img3 .piece10 div{background: url(../image/img3.jpg); left:-100%; top:-200%; }
 .slide .img3 .piece11 div{background: url(../image/img3.jpg); left:-200%; top:-200%; }
 .slide .img3 .piece12 div{background: url(../image/img3.jpg); left:-300%; top:-200%; }
+
  /*콘텍트 : 여수 사이트와 함께 하고 싶은 사람들의 신청을 받는 영역*/
 #contact{width:1000px;height:535px;margin:60px auto 40px;}
 #contact>h3{font-size:30px;text-align: center;font-weight: 400;margin:30px 0;}
