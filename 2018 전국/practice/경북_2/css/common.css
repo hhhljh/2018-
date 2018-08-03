@@ -23,7 +23,7 @@
 .menu li:nth-child(1){background:#e4012e;color:#fff;}
 .menu li:hover{background:#e4012e;color:#fff;}
 .sns i:hover{color:#e4012e;}
-#slide{width:100%;height:600px;position: relative;}
+#slide{width:100%;height:600px;position: relative;overflow-x:hidden;}
 #slide ul{display:flex;width:500%;height:600px;transition:.5s;}
 #slide li{background:no-repeat center / cover;width:20%;}
 #slide li:nth-child(1){background-image:url(../images/visual1.png);}
@@ -36,13 +36,15 @@
 .white h3{font-size:30px;margin:40px 0 30px;transform:inherit;}
 .white p{font-size:20px;color:#e4012e;transform:inherit;}
 .arrow{position: relative;top:calc(50% - 40px);width:35px;height:60px;z-index:10;display:inline-block;}
-.arrow label{position: absolute;top:0;bottom:0;left:0;right:0;}
+.arrow label{position: absolute;top:10px;bottom:0;left:0;right:0;}
+.arrow label:hover{cursor:pointer;}
 .arrow i{color:rgba(255,255,255,.8);font-size:80px;position: absolute;top:10px;}
 .arrow.left{left:260px;}
-.arrow.right{left:calc(260px + 1200px + 80px);}
+.arrow.right{left:calc(260px + 1000px);}
 .radio{position: absolute;bottom:10px;left:calc(50% - 65px);width:130px;height:25px;display:flex;justify-content:space-between;}
 .round{width:20px;height:20px;border-radius:50%;border:1px solid #000;transition:.3s;}
-.round .mini{width:10px;height:10px;border-radius:50%;background:#000;margin:0 auto;margin-top:calc(50% - 5px);transition:.3s;}
+.round:hover{cursor:pointer;}
+.round .mini{width:10px;height:10px;border-radius:50%;background:#000;margin:0 auto;margin-top:calc(50% - 5px);transition:.3s;display:block;}
 
 #slide input{display:block;position: absolute;z-index:1000;}
 #slide input:nth-child(1){left:110px;}
@@ -175,25 +177,25 @@
 #type4:checked ~ .main2_wrap .downside .container .box5 .inner{height:160px;}
 
 :root {
-	--x:skewX(-60deg);
-	--y:skewY(-30deg);
+	--x:skewX(-45deg);
+	--y:skewY(-45deg);
 }
-.downside{display:flex;margin-top:50px;}
+.downside{display:flex;margin-top:40px;}
 .container{position: relative;display:inline-block;margin:0 auto;    background-image: -webkit-linear-gradient(left , rgba(255, 255, 255, .6) 100%, transparent 100%);font-size: 30px;width:950px;height:320px;display:flex;}
 .container:before,
 .container:after{content:"";position:absolute;background:#000;}
-.container:before{transform:var(--x);width:70%;height:1.8em;bottom:-1.8em;left:-0.9em;opacity:0.15;}
-.container:after{transform:var(--y);width:3.2em;height:100%;bottom:-0.9em;left:-2.5em;opacity:0.12;}
+.container:before{transform:var(--x);width:100%;height:1.8em;bottom:-1.8em;left:-0.9em;opacity:0.15;}
+.container:after{transform:var(--y);width:1.8em;height:100%;bottom:-0.9em;left:-1.8em;opacity:0.12;}
 
 .container>span{width:200px;}
 .container li{margin:20px 50px 20px 80px;position: relative; width:130px;margin-left:100px;}
-.back{position: absolute;font-size:18px;background:rgba(0,0,0,.16);display:inline-block;height:320px;width:130px;bottom:-1.3em;left:-4em;}
+.back{position: absolute;font-size:18px;background:rgba(0,0,0,.07);display:inline-block;height:320px;width:130px;bottom:-1.3em;left:-4em;}
 .back:before{position: absolute;background:rgba(0,0,0,.02);transform:var(--x);width:100%;height:2.5em;content:"";bottom:-2.5em;left:-1.25em;}
 .back:after{position: absolute;background:rgba(0,0,0,.04);transform:var(--y);width:2.5em;height:100%;content:"";bottom:-1.25em;left:-2.5em;}
 
 .front{position: absolute;font-size:18px;background:rgba(0,0,0,.04);width:130px;height:320px;left:-6.5em;bottom:-3.65em;}
 .front:before{position: absolute;background:rgba(0,0,0,.06);transform:var(--y);width:2.5em;height:100%;content:"";bottom:1.25em;right:-2.5em;}
-.front:after{position: absolute;background:rgba(0,0,0,.06);transform:var(--x);width:100%;height:2.5em;content:"";top:-2.5em;right:-1.25em;}
+.front:after{position: absolute;background:rgba(0,0,0,.07);transform:var(--x);width:100%;height:2.5em;content:"";top:-2.5em;right:-1.25em;}
 
 .inner{position: absolute;font-size:18px;width:130px;bottom:-3.75em;left:-6.5em;transition:.5s;}
 .inner:before,
@@ -217,7 +219,7 @@
 .box5 .inner:after,
 .box5 .inner{background:#5c8aa2;}
 
-#footer{width:100%;height:450px;background:#1f273a;color:#fff;margin-top:590px;}
+#footer{width:100%;height:450px;background:#1f273a;color:#fff;margin-top:80px;}
 .loca{width:100%;height:400px;display:flex;}
 .loca .map{width:50%;height:100%;}
 .loca .map img{width:100%;height:100%;}
