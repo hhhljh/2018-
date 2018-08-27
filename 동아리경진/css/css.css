@@ -1,1 +1,20 @@
 *{margin:0;padding:0;}
+ul, li{list-style:none;}
+a{display:inherit;text-decoration:none;color:inherit;}
+
+#header{width:100%;height:185px;border-bottom:3px solid #e98b31;}
+.hblack{background:#171717;width:100%;height:40px;text-align: right;}
+.hblack p{margin-right:30px;color:#fff;line-height:40px;font-size:15px;}
+.head{width:1200px;height:1700px;margin:0 auto;border:1px solid #000;}
+.hmiddle{display:flex;height:90px;justify-content:space-between;align-items:center;}
+.logo{height:45px;}
+.search{width:540px;height:40px;border:2px solid #e98b31;margin-left:80px;position: relative;text-align: right;}
+.orange_line{width:2px;height:30px;background:#e98b31;position: absolute;right:70px;top:5px;}
+.search h3{margin-right:18px;font-size:18px;margin-top:9px;}
+.hmiddle>img{width:175px;height:75px;}
+
+.menu{width:100%;height:55px;border-top:1px solid #e9e9e9;display:flex;position: relative;}
+.label{width:60px;height:55px;background:#e98b31;color:#fff;text-align: center;}
+.sub{width:190px;height:55px;}
+.chk{width:1200px;height:250px;position: absolute;top:57px;background:#fff;display:flex;}
+.chk>div{width:240px;border:1px solid #000;text-align: center;}
