@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바 스크립트 객체 정의 - 생성</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var br = "<br>";
+
+human = function(x,y){
+	this.gender = x; // 속성=멤버변수(this..)
+	this.tellGender = function(){
+		document.write("tellGender 메소드"+br);	
+	}// 메소드
+}
+human.prototype.whatGender = function(){
+	alert("whatGender"+this.gender);
+}// 프로토타입 메소드 (static 1개 모든 객체 공유)
+var man = new human("남성"); // 인스턴스 객체 생성
+var woman = new human("여성");
+man.tellGender();
+woman.tellGender();
+man.onlyman = function(){
+	alert("man");
+}// man 객체 생성 이후 man 객체에만 추가 메소드 정의
+man.onlyman(); // 메소드 호출
+woman.onlyman(); // 메소드 호출 불가
+
+</script>
+
+</body>
+</html>

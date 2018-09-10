@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>DOM</title>
+<style type="text/css">
+body{
+font-size: 20px;
+}
+/* a{
+cursor : crosshair;
+background-color: aqua;
+color :red
+} */
+a:hover{
+color: RED;
+}
+</style>
+</head>
+<body>
+<a class="link" href="http://www.daum.net">다음사이트</a><br>
+<a class="link" href="http://www.naver.com">네이터사이트</a><br>
+<a href="http://www.google.co.kr">구글사이트</a><br>
+<p>결과를 아레에 출력합니다</p>
+<script type="text/javascript">
+// class 속성 link 설정 노드만 조회
+var aList = document.getElementsByClassName("link");
+//getElementsByClassName html5 에서 추가된 메소드
+
+var resultArray = new Array();
+//또는 var resultArray = [];
+/* for(var i=0;i<aList.length;i++){
+	document.write(aList.item(i).innerHTML+"-"+aList.item(i).href);	
+	document.write("<br>");
+} */
+
+for(var i=0;i<aList.length;i++){
+	resultArray.push(aList.item(i).innerHTML+"-"+aList.item(i).href);	
+	}
+	// 배열 이름 출력 default : ', (콤마)'
+	// 배열 이름 출력 구분자 직접 지정: .join("분리자")
+	document.write(resultArray.join("<br>"));
+	
+</script>
+</body>
+</html>

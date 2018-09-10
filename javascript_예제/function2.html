@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>함수 정의와 호출</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// 변수 사용 범위
+// 1. 전역변수 : function 외부선언 또는 function 내부 선언 (var없이!!)
+// 2. 지역변수 : function 내부 선언 (var 있다!!)
+
+var j = 200; // 전역 변수, 모든 함수 내부
+i = "테스트"; // 전역 변수
+
+function f1(){
+	k= "f1 테스트";
+	var j = 300;	// f1 함수 지역변수 : f1 함수내부
+	document.write(j+"<br>"); 
+	document.write(i+"<br>"); 
+	document.write("F1함수 "+k+"<br>")	
+}
+f1();
+function f2(){
+	document.write(j+"<br>");
+	document.write(k+"<br>");
+}
+f2();
+ 
+</script>
+</body>
+</html>

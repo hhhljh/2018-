@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>체크박스 이벤트</title>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById("fruit").onsubmit = 
+		function(){
+		var c1 = document.getElementById("c1");
+		var c2 = document.getElementById("c2");
+		var c3 = document.getElementById("c3");
+		var c4 = document.getElementById("c4");
+		var c5 = document.getElementById("c5");
+		// c1~c5 변수들은 checkbox input 태그
+		// 다중선택 값들을 배열에 저장, 한번에 모아서 출력한다.
+		var fruits = [];
+		// var fruits = new Array(); 
+		if(c1.checked){
+			fruits.push(c1.value);
+			// 배열에 데이터 저장 push
+		}if(c2.checked){
+			fruits.push(c2.value);
+			// 배열에 데이터 저장 push
+		}if(c3.checked){
+			fruits.push(c3.value);
+			// 배열에 데이터 저장 push
+		}if(c4.checked){
+			fruits.push(c4.value);
+			// 배열에 데이터 저장 push
+		}if(c5.checked){
+			fruits.push(c5.value);
+			// 배열에 데이터 저장 push
+		}// fruits 배열 : 선택한 과일이름 저장
+		alert(fruits.join('-')+ " : 과일을 선택하셨습니다.");
+	}
+}
+</script>
+</head>
+<body>
+<form id="fruit" action="">
+<input type="checkbox" id="c1" value="사과">사과<br>
+<input type="checkbox" id="c2" value="파인애플">파인애플<br>
+<input type="checkbox" id="c3" value="딸기">딸기<br>
+<input type="checkbox" id="c4" value="감">감<br>
+<input type="checkbox" id="c5" value="배">배<br>
+<input type="submit" value="선택">
+</form>
+</body>
+</html>

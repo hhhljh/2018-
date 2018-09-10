@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바 스크립트 객체 정의 - 생성</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var br = "<br>";
+// 자바 스크립트 묵시적 약속: 이름 대문자 시작 -> 객체 정의
+// 생성자 함수 (=클래스 정의)로 인식
+var Human = function(gender,name){
+	this.gender = gender; // 객체 내부 this.멤버변수
+	this.name = name;
+	this.print = function(){
+		document.write(this.name+" : "+this.gender+br);
+	}	
+}// 객체 정의
+var man = new Human("남성","JAVA"); // 인스턴스 객체 생성
+var woman = new Human("여성","JSP");
+
+man.print();
+woman.print();
+
+// Employee 객체 정의
+var Employee = function(gender,name,salary){
+	this.parent = new Human(gender,name);
+	// 상속 자동 포함
+	this.salary = salary;
+	this.work =  function(){
+		document.write(name +" : "+salary);
+	}
+} // Employee 객체 정의 끝
+
+//객체 생성
+var emp1 = new Employee("남성", "김사원", 56000);
+emp1.work(); // Employee 정의 메소드
+document.write(br);
+emp1.parent.print(); // Human 정의 메소드 상속
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>이벤트 버블링</title>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById("outer").onclick =function(){
+		alert("2. 상위 태그에서 이벤트 발생")};
+	document.getElementById("inner").onclick=function(e){
+		// 이벤트 처리 함수 매개변수 : 이벤트 객체		
+		alert("1. 하위 태그에서 이벤트 발생 ");
+		// ie와 그 외의 브라우저 코드 구현
+		if(window.event){ // ie
+			window.event.cancelBubble = true;
+		}else if(e.stopPropagation){ // 그 외 브라우저
+			e.stopPropagation();			
+		}
+	}
+}
+</script>
+</head>
+<body>
+<div id="outer">
+<div id="inner">
+클릭해보세요.
+</div>
+</div>
+</body>
+</html>

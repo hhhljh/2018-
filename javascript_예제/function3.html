@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>매개변수 테스트</title>
+</head>
+<body>
+<script type="text/javascript">
+function add(){
+// 자바 스크립트  함수 호출할 때마다 자동 생성 변수
+// arguments 변수  : add 호출시 전달 매개변수들 저장 변수
+// arguments 변수  : 배열타입 변수
+// 전달 매개변수의 갯수 출력
+document.write(arguments.length+"<br>");
+var sum =0;
+for(var i=0;i<arguments.length;i++){
+	sum = sum+arguments[i];
+}
+return sum;
+}
+
+// 로직 실행 함수 호출
+alert(add(1,2));
+alert(add(1,5,9));
+alert(add(1,2,3,4,5,6,7,8,9,10));
+
+</script>
+</body>
+</html>

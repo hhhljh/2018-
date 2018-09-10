@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 과목명 저장배열
+var subjects = new Array('국어', '영어', '수학');
+var sum = 0;
+var avg = 0;
+var grade = "";
+
+for(var i =0;i<subjects.length;i++){
+	//3과목 점수 입력
+	while(true){
+		var score = prompt(subjects[i]+"점수 입력하세요",""+"<br>");
+		var scoreInt= Number(score);
+		if(scoreInt>=0 && scoreInt<=100 && scoreInt != NaN){
+			break;
+		}		
+	}
+	document.write(scoreInt+"<br>");
+	sum = sum+scoreInt;
+}//for end
+avg = sum/3;
+document.write("총점 ="+sum+"<br>");
+document.write("평균="+avg+"<br>");
+
+if(avg>=90){
+	grade = "A";
+}else if(avg>=80){
+	grade = "B";
+}else if(avg>=70){
+	grade = "C";
+}else if(avg>=60){
+	grade = "D";
+}else{
+	grade = "F";
+}document.write("등급 = "+grade+"<br>")
+</script>
+</head>
+<body>
+</body>
+</html>

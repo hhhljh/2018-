@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바 스크립트 객체 정의 - 생성</title>
+</head>
+<body>
+<script type="text/javascript">
+
+/* class human{
+    gender변수;
+  	 human(x){
+        gender = x;
+    }
+} */
+
+var br = "<br>";
+
+var human = function(x,y){
+	this.gender = x;
+	this.name = y;
+}
+var man = new human("남성","JAVA"); // 인스턴스 객체 생성
+var woman = new human("여성","JSP");
+document.write(man.gender+br);
+document.write(woman.gender+br);
+
+document.write(man.name+br);
+document.write(woman.name+br);
+
+</script>
+
+</body>
+</html>

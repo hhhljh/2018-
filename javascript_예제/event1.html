@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>이벤트 처리1</title>
+<script type="text/javascript">
+/* function start(){
+	var h1 = document.getElementById("header");
+	h1.onclick = function(){
+		alert("클릭했습니다");
+	}
+}
+window.onload = start; 
+// window.onload 선언에서는 start()함수를 붙이는게 아니다. 
+*/
+
+window.onload = function(){
+	var h1 = document.getElementById("header");
+	h1.onclick = function(){
+		alert("클릭했습니다");
+	}
+}
+</script>
+</head>
+<body>
+<h1 id="header"> 클릭하세요 </h1>
+</body>
+</html>

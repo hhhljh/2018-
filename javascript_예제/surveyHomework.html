@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>설문 조사 시스템</title>
+<script type="text/javascript">
+window.onload = function(){
+ var forms = document.getElementById("survey");
+ forms.onsubmit = function(){
+ var name = document.getElementById("name").value;
+ var phone = document.getElementById("phone").value;
+ var email = document.getElementById("email").value;
+ 
+  var arc = document.getElementById("arc");
+ var cf = document.getElementById("cf");
+ var etc = document.getElementById("etc");
+ 
+ var paths = new Array();
+ if(arc.checked){
+  paths.push(arc.value);
+ }
+ if(cf.checked){
+  paths.push(cf.value);
+ }
+ if(etc.checked){
+  paths.push(etc.value);
+ }
+ 
+ var tennis = document.getElementById("t");
+ var golf = document.getElementById("g");
+ var basket = document.getElementById("b"); 
+ var squ = document.getElementById("s");
+ var ball = document.getElementById("ba");
+ var sc = document.getElementById("sc");
+  
+ var sports = new Array();
+ if(tennis.checked){
+  sports.push(tennis.value);
+ }
+ if(golf.checked){
+  sports.push(golf.value);
+ }
+ if(basket.checked){
+  sports.push(basket.value);
+ }
+ if(squ.checked){
+  sports.push(squ.value);
+ }
+ if(ball.checked){
+  sports.push(ball.value);
+ }
+ if(sc.checked){
+  sports.push(sc.value);
+ }
+ var em = document.getElementById("em").value;
+ var ph = document.getElementById("ph").value;
+
+ alert("이름 : "+name+" 전화 : "+phone+" 메일 : "+email+" 경로 : "+paths.join("-")+"좋아하는 스포츠 : "+sports.join("-")+em+ph);
+ }
+}
+</script>
+</head>
+<body>
+<form id="survey" action="">
+<h1>설문조사</h1>
+
+아래 항목을 채워주세요.<br>
+
+<h4>신상 정보 : </h4>
+<table>
+<tr VALIGN="MIDDLE"><td>이름</td>　　　 　<td VALIGN="MIDDLE"><input type="text" id="name" value=""></td></tr>
+<tr VALIGN="MIDDLE"><td>전화번호</td>　 　<td VALIGN="MIDDLE"><input type="text" id="phone" value=""></td></tr>
+<tr VALIGN="MIDDLE"><td>이메일주소</td> 　<td VALIGN="MIDDLE"><input type="text" id="email" value=""></td></tr>
+</table>
+
+<h3> 어떤 경로로 알게 되었습니까? </h3>
+<input type="radio" name="path" id="arc" value="기사"/>기사<br>
+<input type="radio" name="path" id="cf" value="광고"/>광고<br>
+<input type="radio" name="path" id="etc" value="기타"/>기타<br>
+
+<h3> 좋아하는 스포츠는 무엇입니까? </h3>
+<input type="checkbox" id="t" value="테니스"/>테니스
+<input type="checkbox" id="g" value="골프"/>골프
+<input type="checkbox" id="b" value="농구"/>농구<br>
+<input type="checkbox" id="s" value="스쿼시"/>스쿼시
+<input type="checkbox" id="ba" value="볼링"/>볼링
+<input type="checkbox" id="sc" value="축구"/>축구
+<br><br>
+연락방법  
+<select>
+<option id="em" value="email">email</option>
+<option id="ph" value="phone">phone</option>
+</select>
+<br><br>
+<input type="checkbox"> 개인정보 활용에 동의합니다. 
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+

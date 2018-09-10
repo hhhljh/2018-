@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>검색</title>
+<script type="text/javascript">
+window.onload = function() {
+		var serform = document.getElementById("form");
+		serform.onsubmit = function() {
+			var sel = document.getElementById("sel").value;
+			var txt = document.getElementById("text1").value;
+			document.getElementById("id").innerHTML =
+				sel + "이 " + txt + "인 항목을 검색하였습니다.";
+			return false;
+	}		
+}
+</script>
+
+</head>
+<body>
+	<form id="form" action="">
+		<select id="sel">
+			<option value="제목">제목</option>
+			<option value="내용">내용</option>
+			<option value="작성자">작성자</option>
+		</select> 
+		<input type="text" id="text1" value=""> 
+		<input type="submit" value="검색">
+	</form>
+	<br>
+	<br>
+	[아래와 같이 나옵니다]<br>
+	<br>
+	<div id="id"></div>
+
+</body>
+</html>

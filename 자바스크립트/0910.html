@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 연습문제</title>
+	<script type="text/javascript">
+		function func1(){
+			alert("안녕");
+		}
+
+		function func2(){
+			var today = new Date();
+			var ty = today.getFullYear();
+			var tm = today.getMonth();
+			var td = today.getDate();
+
+			alert(ty + "." + tm + "." + td + "/" + today);
+		}
+
+		function func3(){
+			var fileName = document.getElementById("file").value;
+			fileName = fileName.slice(fileName.indexOf(".")+1).toLowerCase();
+			if(fileName =="hwp"){
+				document.getElementById("result").innerHTML = "hwp파일입니다";
+			} else if(fileName != "hwp")
+				document.getElementById("result").innerHTML = "hwp파일이 아닙니다";
+		}
+
+		function func4(){
+			var birth
+		}
+	</script>
+</head>
+<body>
+	<p>1. 버튼 클릭시에 "안녕" alert로 출력</p>
+	<input type="button" value="클릭" onclick="func1()">
+
+	<p>2. 버튼 클릭시에 현재 날짜/시간 alert로 출력</p>
+	<input type="button" value="클릭" onclick="func2()">
+
+	<p>3. 파일명 입력후 버튼 눌러서 hwp파일인지 확인해서 p태그 사이에 결과 출력</p>
+	<input type="text" name="file" id="file">
+	<input type="button" value="클릭" onclick="func3()">
+	<p id="result"></p>
+
+	<p>4. 주민번호(13자리) 입력후 생년월일 출력 후 alert로 출력</p>
+	<input type="text" name="birth" id="birth">
+	<input type="button" value="클릭" onclick="func4()">
+
+	<p>5. 점수를 입력 받아서 버튼 눌르면 A~F학점을  alert로 출력</p>
+
+	<p>6. 다음과 같은 형태를 for문으로 출력하시오.</p>
+	<pre>
+	*
+	**
+	***
+	****
+	*****
+	</pre>
+
+	<p>7. 다음과 같은 형태를 for문으로 출력하시오.</p>
+	<pre>
+	###
+	%%%
+	###
+	%%%
+	###
+	%%%
+	</pre>
+
+	<p>8. 다음과 같은 형태를 for문으로 출력하시오.</p>
+	<pre>
+	*****
+	****
+	***
+	**
+	*
+	</pre>   
+</body>
+</html>

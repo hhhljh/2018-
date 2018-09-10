@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>키보드 입력</title>
+<script type="text/javascript">
+function check(){
+	alert("이벤트 이름 => "+ event);
+	code = event.keyCode;
+	if(code==189){
+	document.getElementById("output").innerHTML = "-은 입력 불가능합니다.";
+	// 0-9숫자들만 입력 가능하다. 48~57....
+	}else{
+		document.getElementById("output").innerHTML = code+"입력 되었씁니다.";
+	}
+}
+</script>
+</head>
+<body>
+<input type="text" id="phone" onkeyup="check()">
+
+<div id="output">출력 내용이 여기에 나옵니다</div>
+</body>
+</html>

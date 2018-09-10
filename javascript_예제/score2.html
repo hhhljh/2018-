@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+var kor = prompt("국어 점수 입력 : ");
+document.write(Number(kor));
+var math = prompt("수학 점수 입력 : ");
+var eng = prompt("영어 점수 입력 : ");
+var n = 0;
+while(n==0){
+if((parseInt(kor)<0 || isNaN(parseInt(kor))==true || parseInt(kor)>100)
+	|| ((parseInt(math)<0 || isNaN(parseInt(math))==true || parseInt(math)>100))
+	|| ((parseInt(math)<0 || isNaN(parseInt(math))==true || parseInt(math)>100)))
+{
+n=0;
+alert("잘못 입력하셨습니다. 다시 실행하세요.");
+var kor = prompt("국어 점수 재 입력 : ");
+var math = prompt("수학 점수 재 입력 : ");
+var eng = prompt("영어 점수 재 입력 : ");
+}
+else
+{
+	confirm("결과를 확인하시겠습니까?");
+	n=1;
+}
+}
+
+var result = parseInt(kor)+parseInt(math)+parseInt(eng);
+var average = result/3;
+
+switch(parseInt(average/10)){
+case 10 :
+case 9 : document.write("등급 : A<br>"); break;
+case 8 : document.write("등급 : B<br>"); break;
+case 7 : document.write("등급 : C<br>"); break;
+case 6 : document.write("등급 : D<br>"); break;
+default : document.write("등급 : F<br>"); 
+}
+
+document.write("합계 : "+result+"<br>");
+document.write("평균 : "+average.toFixed(2)+"<br>");
+r=1;
+
+</script>
+</head>
+<body>
+</body>
+</html>

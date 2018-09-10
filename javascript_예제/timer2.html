@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Window 메소드 1</title>
+<script type="text/javascript">
+var id = setInterval(
+function() {
+	document.getElementById("here").innerHTML 
+	="<h1>"+ new Date().toLocaleString() +"</h1>";
+	// div 태그 사이에 시간 출력
+},1000);
+setTimeout(
+		function(){
+			clearInterval(id);
+			newWindow = //open("http://www.kitri.re.kr");
+			open("","빈창")
+			newWindow.document.write("<h3>"+new Date().toLocaleString() +"</h1>");
+			// newWindow에서 문자열 전송하면
+			// 부모 window(newWindow open 창) 출력
+			var sendString = "새창에서 전송하는 내용입니다."
+			newWindow.opener.document.write(sendString);
+		}		
+		,5000);
+setTimeout(
+		function(){
+			newWindow.close();
+		}, 8000);
+// clearInterval 끝내는 메소드(시간 언제 멈춰줄지 정함)
+</script>
+</head>
+<body>
+아래쪽에 시계를 출력할 생각입니다.
+10초후에 중단합니다.
+<div id="here"></div>
+</center>
+</body>
+</html>

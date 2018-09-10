@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>연산시스템 구현 하기</title>
+<script type="text/javascript">
+function start(){
+ var t1 = document.getElementById("t1");
+ var t1s = t1.value;
+ var t1int = parseInt(t1s);
+ var t2 = document.getElementById("t2");
+ var t2s = t2.value;
+ var t2int = parseInt(t2s);
+ var results;
+ 
+ document.getElementById("+").onclick = function(){add()};
+ document.getElementById("-").onclick = function(){sub()};
+ document.getElementById("*").onclick = function(){mul()};
+ document.getElementById("/").onclick = function(){div()};
+
+function add(){
+ results = t1int+t2int;
+ document.getElementById("result").value = results;
+ return false; 
+}
+function sub(){
+ results = t1int-t2int;
+ document.getElementById("result").value = results;
+
+ return false;
+ }
+function mul(){
+ results = t1int*t2int;
+ document.getElementById("result").value = results;
+ return false;
+ }
+function div(){
+ results = t1int/t2int;
+ document.getElementById("result").value = results;
+
+ return false;
+ }
+}
+
+</script>
+</head>
+<body>
+<h1> 연산 시스템 </h1> 
+<h3> 아래 항목을 채워주세요. </h3>
+
+<form>
+<pre>
+피연산자1   <input id="t1" type="text" value="">
+피연산자2   <input id="t2" type="text" value="">
+<b>결과값</b>      <input id="result" type="text" value="" readonly="readonly">
+</pre>
+<input type="button" id="+" value="+" onclick="start()">
+<input type="button" id="-" value="-" onclick="start()">
+<input type="button" id="*" value="*" onclick="start()">
+<input type="button" id="/" value="/" onclick="start()">
+</form>
+</body>
+</html>
+

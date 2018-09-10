@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>휴대폰 체크</title>
+</head>
+<body>
+<script type="text/javascript">
+var phone = prompt("전화번호 입력하세요.");
+
+function phoneCheck(phone){
+	var i = 0;
+	while(i==0){
+	if(isNaN(parseInt(phone))||(phone.length<10 || phone.length>11))
+	{
+	document.write("잘못 입력하셨습니다.<br>");
+	i=0;
+	var phone = prompt("전화번호 재 입력하세요.");
+	}
+	else{
+		return document.write(phone);
+		i=1;
+	}
+}
+}
+phoneCheck(phone);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>계산기</title>
+</head>
+<body>
+<script type="text/javascript">
+function add(x,y){
+	return x+y;
+}
+function sub(x,y){
+	return x-y;
+}
+function mul(x,y){
+	return x*y;
+}
+function div(x,y){
+	if(y==0){
+	    return "오류발생"
+	}else{
+		return x/y;	
+	}
+}
+var input = prompt("숫자 1 연산자 숫자 2 형식으로 입력하세요.");
+var inputArr = input.split(" ",3);
+
+var firstInt = parseInt(inputArr[0]);
+var op = inputArr[1];
+var secondInt = parseInt(inputArr[2]);
+
+if(op=="+"){
+	document.write(add(firstInt,secondInt));
+}else if(op=="-"){
+	document.write(sub(firstInt,secondInt));
+}else if(op=="*"){
+	document.write(mul(firstInt,secondInt));
+}else if(op=="/"){
+	document.write(div(firstInt,secondInt));
+}else{
+	document.write("잘못된 연산자 입니다.");
+}
+
+
+</script>
+
+</body>
+</html>

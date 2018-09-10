@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>dom 객체 연습</title>
+<script type="text/javascript">
+// id buy인 노드 찾아서 자식 노드값 출력
+// buyList => li,id,라면,/li,....,li,li
+var buy = document.getElementById("buy");
+var buyList = buy.childNodes;
+for(var i=0;i<buyList.length;i++){
+	// 노드 타입 조사 : 요소 노드인지 확인한다.
+	if(buyList.item(i).nodeType==1){
+	document.write(buyList.item(i).nodeType+"<br>");
+	document.write(buyList.item(i).nodeName+"<br>");
+	document.write(buyList.item(i).innerHTML+"<br>");
+}
+}
+</script>
+
+</head>
+<body>
+<h1> 쇼핑 목록 </h1>
+<p> 마트에서 사야 할 목록 </p>
+<ul id="buy">
+<li>라면</li>
+<li>맥주</li>
+<li>땅콩</li>
+</ul>
+
+</body>
+</html>

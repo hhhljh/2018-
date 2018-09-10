@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>DOM 노드 추가</title>
+<script type="text/javascript">
+	function addSite(f) {
+		// 1. A태그 생성
+		var a = document.createElement("a");
+		// 2. href 속성
+		a.href = f.siteUrl.value;
+		// 3. 텍스트 노드 생성
+		var name = document.createTextNode(f.siteName.value);
+		// 4. 1번+3번 연결
+		a.appendChild(name);
+		
+		// br 태그 생성, result 어느 부분 insert
+		var del = document.createElement("input");
+		del.type = "button";
+		del.value = "삭제버튼";
+		del.onclick = function(){
+			var node = document.getElementById("result");
+			node.removeChild(a);
+			node.removeChild(del);		
+			node.removeChild(br);	
+		}
+		//b.setAttribute(onclick,"del");
+		// 5. 삭제 버튼 input 태그 생성
+		// 6. input 생성명 .type = "button"
+		// 7. input 생성명 .value = "삭제버튼"
+		// 8. input 생성명 .onclick = 함수명
+
+		// 5. 출력
+		var result = document.getElementById("result");
+		result.insertBefore(del, result.firstChild);
+		
+		// 6. a 태그가 input 태그 앞쪽 추가
+		result.insertBefore(a,del);
+		
+		// br 태그생성
+		var br = document.createElement("br");
+				
+		result.insertBefore(br, a);
+
+			
+	}
+</script>
+</head>
+<body>
+	<form>
+		사이트명 : <input type="text" name="siteName" size=30><br>
+		URL : <input type="text" name="siteUrl" size=50><br>
+		입력 : <input type="button" value="추가버튼" onclick="addSite(this.form)"><br>
+	</form>
+	
+	<div id="result">결과는 아래와 같습니다.</div>
+	<!--  사이트명과 url 입력 : 추가버튼 화면 생성
+	<a href=url> 사이트명 </a>
+	태그생성 -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type="text/javascript">
+         $(document).ready(function(){
+            //1번
+			var today=new Date();
+			var day=today.getDay();
+            if(day==0){
+                $("body").css("background-color","blue");
+            }else if(day==1){
+                $("body").css("background-color","green");
+            }else if(day==2){
+                $("body").css("background-color","red");
+            }else if(day==3){
+                $("body").css("background-color","orange");
+            }else if(day==4){
+                $("body").css("background-color","aqua");
+            }else if(day==5){
+                $("body").css("background-color","gray");
+            }else if(day==6){
+                $("body").css("background-color","olive");
+            }  
+             
+             //2번
+             $("#btn1").click(function(){
+                  $("#p1").html("반갑습니다.");
+                 
+             });
+             
+             //3번
+             $("#btn2").click(function(){
+                  $("#div1").css("display","none");
+                 
+             });
+             
+             //4번
+             $("#btn3").mouseover(function(){
+                 $(this).css("background-color","black");
+                 $(this).css("color","white");
+             });
+             $("#btn3").mouseout(function(){
+                 $(this).css("background-color","white");
+                 $(this).css("color","black");
+             });
+             
+             //5번
+             $("a").each(function(){
+                 //alert($(this).attr("href"));
+                 if($(this).attr("href")=="http://www.naver.com"){
+                     $(this).css("color","orange");
+                 }
+             });
+    
+		});
+    
+        </script>
+    </head>
+    <body>
+       <h1>jQuery 연습문제</h1>
+<p>
+1. 요일에 따라 웹페이지의 배경색이 자동으로 바뀌는 프로그램을 
+작성하시오.
+</p>
+ 
+<p>
+2. p태그에 '안녕하세요'를 적고, 버튼을 누르면 '반갑습니다'로 
+바뀌게 하시오.
+</p>
+<p id="p1">안녕하세요</p>
+<input type="button" id="btn1" value="클릭">
+ 
+<p>
+3. div태그에 'Good morning'을 적고, 버튼을 클릭하면
+사라지게 하시오.
+</p>
+<div id="div1">Good morning</div> 
+<input type="button" id="btn2" value="클릭">
+
+<p>
+4. input type button에 마우스 커서가 올라가면 버튼 
+배경색을 black, 글자색을 white로 변경되게 하시오.
+</p>
+<input type="button" id="btn3" value="버튼"> 
+
+<p>
+5. 네이버와 다음으로 연결되는 링크 중 네이버로 연결되는
+링크를 찾아서 글자색을 orange로 변경하시오.
+</p>
+<a href="http://www.naver.com">네이버</a>
+<a href="http://www.daum.net">다음</a>   
+
+   
+   
+</body>
+</html>
+
+
+
+
+
+
+
+

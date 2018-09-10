@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바 스크립트 객체 정의 - 생성</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var br = "<br>";
+// 자바 스크립트 묵시적 약속: 이름 대문자 시작 -> 객체 정의
+// 생성자 함수 (=클래스 정의)로 인식
+var human = function(gender,name){
+	this.gender = gender; // 객체 내부 this.멤버변수
+	this.name = name;
+	this.print = function(){
+		document.write(this.name+" : "+this.gender+br);
+	}	
+}// 객체 정의
+var man = new human("남성","JAVA"); // 인스턴스 객체 생성
+var woman = new human("여성","JSP");
+
+man.print();
+woman.print();
+
+</script>
+</body>
+</html>

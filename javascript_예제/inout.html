@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바스크립트 입출력 기능</title>
+<script type="text/javascript">
+var result1 = alert("메시지 확인후에 버튼을 클릭해야 창이 없어집니다.")
+var result2 = confirm("데이터를 전송하시겠습니까?");
+var result3 = prompt("입력할 데이터가 맞습니까? 기본값(ok)", "ok");
+
+document.write(result1+"<br>"); // undefined - 함수리턴값 없다
+document.write(result2+"<br>"); // true - 논리값 리턴
+document.write(result3+"<br>"); // ok - 함수 호출 결과 리턴
+
+document.writeln(typeof(result3)+"<br>"); // string 리턴
+var result4 = parseInt(result3);  
+document.writeln(typeof(result4)+"<br>");
+//"100" -> 정수 100 변환			// number 리턴
+// parseInt()
+
+console.log("자바 스크립트 실행 완료");
+</script>
+</head>
+<body>
+
+</body>
+</html>

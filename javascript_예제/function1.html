@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>함수 정의와 호출</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// 함수 실행 결과 호출 전달 : return값
+// 자바 스크립트 return 문 개행처리X
+function f1(param){
+	//var j = 200;
+	document.write(param+"<br>");
+	return param+" 을 리턴합니다.";
+}
+ 
+var result1 =f1(100);		//숫자, 출력 x
+var result2= alert(f1(200)); // 팝업창 200을...
+
+document.write(f1("문자열값")); //문자
+f1(new Date()); // 객체 
+
+var result1 =var i = 100;
+document.write(i+"<br>");
+// 작성만 하면 바로 실행
+
+function f1(){
+	var j = 200;
+	document.write(j+"<br>");
+}
+//f1 정의 - 호출해야만 실행
+f1();
+//alert(f1); // f1 함수 정의 내용 전부 출력
+// alert(f1()); undefined 출력
+
+// 2. 함수 선언 : 이름 없다. anoymous(익명) 함수
+// 변수타입 : 함수형
+// f1(200출력) ==> f1: 익명함수 ==> 다형성
+function(){
+	var s = "익명함수";
+	document.write(s+"<br>");
+}
+f2();
+alert(f2);
+
+</script>
+</body>
+</html>
