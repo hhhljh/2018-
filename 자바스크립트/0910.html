@@ -26,8 +26,52 @@
 				document.getElementById("result").innerHTML = "hwp파일이 아닙니다";
 		}
 
-		function func4(){
-			var birth
+		function  func4(){
+			var birth = document.getElementById("birth");
+			var Length = birth.value.length;
+			if(Length < 13 && Length > 13){
+				alert("양식에 맞지 않습니다. 다시 입력하세요.");
+			} else if(Length == 13){
+				var birthSubstr = birth.value.substr(0, 6);
+				console.log(birthSubstr);
+				alert(birthSubstr);
+			}
+		}
+
+		function func5(){
+			var score = document.getElementById("score");
+			var scoreLength = score.value.length;
+			var grade;
+			if(scoreLength > 3){
+				alert("양식에 맞지 않습니다. 다시 입력하세요.")
+			} else if(scoreLength <= 3){
+				var value = score.value;
+				if(value == 100){
+					grade ="SUPER"
+				}else if(value > 90){
+					grade =  "A";
+				} else if(value > 80){
+					grade = "B"
+				} else if(value > 70){
+					grade = "C"
+				} else if(value < 70){
+					grade ="F"
+				}
+				alert(grade);
+			}
+		}
+
+		function func6(){
+			for(var i = 1; i <= 5; i++){
+				for(var j = 1; j <= i; j++){
+					document.write("*");
+				}
+				document.write("<br>")
+			}
+		}
+
+		function func7(){
+			
 		}
 	</script>
 </head>
@@ -48,6 +92,8 @@
 	<input type="button" value="클릭" onclick="func4()">
 
 	<p>5. 점수를 입력 받아서 버튼 눌르면 A~F학점을  alert로 출력</p>
+	<input type="text" name="score" id="score">
+	<input type="button" value="클릭" onclick="func5()">
 
 	<p>6. 다음과 같은 형태를 for문으로 출력하시오.</p>
 	<pre>
@@ -57,6 +103,9 @@
 	****
 	*****
 	</pre>
+	<script type="text/javascript">
+		func6();
+	</script>
 
 	<p>7. 다음과 같은 형태를 for문으로 출력하시오.</p>
 	<pre>
@@ -67,6 +116,9 @@
 	###
 	%%%
 	</pre>
+	<script type="text/javascript">
+		func7();
+	</script>
 
 	<p>8. 다음과 같은 형태를 for문으로 출력하시오.</p>
 	<pre>
