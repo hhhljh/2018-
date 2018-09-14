@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOADING</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<style>\
+		*{margin:0;padding:0;}
+		.full{background:#aaa;width:100%;height:100%;display:flex;justify-content:center;}
+		.full .box{width:30px;background:#000;margin:20px;margin-top:calc(50vh - 150px);transition:.3s;}
+		.full .box.load1{height:300px;}
+		.full .box.load2{height:150px;}
+		@keyframes load1{
+			0%{height:300px;}
+			25%{height:600px;}
+			50%{height:300px;}
+			75%{height:600px;}
+			100%{height:300px;}
+			}
+		@keyframes load2{
+			0%{height:300px;}
+			25%{height:100px;}
+			50%{height:300px;}
+			75%{height:100px;}
+			100%{height:300px;}
+			}
+		</style>
+<script>
+$(function(){
+	$(document).ajaxStart(function(){
+	console.log("실패");
+		$(".load1").css("animation","load1 infinite .5s");
+		$(".load2").css("animation","load2 infinite .5s");
+	})
+})
+
+</script>
+<body>
+	<div class="full">
+		<div class="box load1"></div>
+		<div class="box load2"></div>
+		<div class="box load1"></div>
+		<div class="box load2"></div>
+		<div class="box load1"></div>
+	</div>
+</body>
+</html>

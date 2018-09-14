@@ -71,7 +71,23 @@
 		}
 
 		function func7(){
-			
+			for(var i = 0; i < 6; i++){
+				if(i%2 == 0){
+					document.write("###")
+				} else{
+					document.write("%%%")
+				}
+				document.write("<br/>")
+			}
+		}
+
+		function func8(){
+			for(var i=5; i > 0; i--){
+				for(var j=0; j<i; j++){
+					document.write("*")
+				}
+				document.write("<br/>")
+			}
 		}
 	</script>
 </head>
@@ -127,6 +143,10 @@
 	***
 	**
 	*
-	</pre>   
+	</pre>
+
+	<script type="text/javascript">
+		func8();
+	</script>   
 </body>
 </html>
