@@ -1,37 +1,56 @@
-function loadFunction(){
+function loadFunction (){
 	$("head").append('\
 		<style>\
-		*{margin:0;padding:0;}\
-		.full .box{width:30px;background:#000;margin:20px;margin-top:calc(50vh - 150px);transition:.3s;}\
-		.full .box.load1{height:300px;}\
-		.full .box.load2{height:150px;}\
-		@keyframes load1{\
-			0%{height:300px;}\
-			25%{height:600px;}\
-			50%{height:300px;}\
-			75%{height:600px;}\
-			100%{height:300px;}\
-			}\
-		@keyframes load2{\
-			0%{height:300px;}\
-			25%{height:100px;}\
-			50%{height:300px;}\
-			75%{height:100px;}\
-			100%{height:300px;}\
-			}\
+		#top>.navbar{position:sticky;top:0;}\
+		ul.navbar-right li a:hover{color:#ff4e00 !important;}\
+		\
 		</style>\
 		')
+	backHover();
+	imgMove();
+	scrollAnimate();
+	iconMove();
 }
-function loadAnimation(){
-	$("body").append('\
-		<div class="full">\
-			<div class="box load1"></div>\
-			<div class="box load2"></div>\
-			<div class="box load1"></div>\
-			<div class="box load2"></div>\
-			<div class="box load1"></div>\
-		</div>\
-		')
+
+function backHover(){
+	$(".social-icon a, #home .btn").mouseenter(function(){
+		$(this).css("background","RGB(40, 167, 233)");
+	})
+	$(".social-icon a, #home .btn").mouseleave(function(){
+		$(this).css("background","transparent");
+	})
 }
-$(window)
-.load(loadFucntion);
+
+function imgMove(){
+	var imgBlock = $("#team .team-wrapper")
+	$(imgBlock).mouseenter(function(){
+		$(this).css({'opacity':'.6','margin-top':'-2px'});
+	})
+	$(imgBlock).mouseleave(function(){
+		$(this).css({'opacity':'1','margin-top':'0px'})
+	})
+}
+
+function scrollAnimate(){
+	$(".navbar-default .navbar-nav li a").click(function(){
+		var thisHref = $(this).attr('href')
+		var scrollOn = $(thisHref).offset().top;
+		$('html, body').animate({scrollTop : scrollOn},600);
+	})
+
+}
+
+function iconMove(){
+	var iconBtn = $(".media .media-object.pull-left");
+	$(iconBtn).mouseenter(function(){
+		$(this).css({'margin-top':'20px', 'transition':'.3s'});
+	})
+	$(iconBtn).mouseleave(function(){
+		$(this).css({'margin-top':'00px', 'transition':''});
+	}) 
+}
+
+$(loadFunction)
+.on('mouseenter mouseleave', '#service div.col-md-4', function () {
+	$(this).toggleClass('active')
+})
