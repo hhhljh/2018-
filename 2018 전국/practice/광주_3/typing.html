@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<style type="text/css">
+	* {margin: 0px;padding: 0px;}
+	p {display: none;font-size: 25px;font-family:dotum}
+	.p2 {display: block;width: 100%;margin: 0 auto;word-break: break-all;margin-top:50px;}
+	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>http://www.blueb.co.kr</title>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<p>안녕하세요. 블루비에 오신것을 환영합니다.</p>
+<p class="p2"></p>
+
+<script type="text/javascript">
+function changeText(cont1,cont2,speed){
+	var Otext=cont1.text();
+	var Ocontent=Otext.split("");
+	var i=0;
+	function show(){
+		if(i<Ocontent.length)
+		{		
+			cont2.append(Ocontent[i]);
+			i=i+1;
+		};
+	};
+		var Otimer=setInterval(show,speed);	
+};
+$(document).ready(function(){
+	changeText($("p"),$(".p2"),150);
+	clearInterval(Otimer);
+});
+</script>
+
+</body>
+</html>
