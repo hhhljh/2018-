@@ -3,7 +3,7 @@ function loadFunction (){
 		<style>\
 		#top>.navbar{position:sticky;top:0;}\
 		ul.navbar-right li a:hover{color:#ff4e00 !important;}\
-		\
+		#contact #message{resize: vertical;}\
 		</style>\
 		')
 	backHover();
@@ -12,9 +12,10 @@ function loadFunction (){
 	iconMove();
 	imgOver();
 	splitTxt();
-	typingTxt();
+	messageBox();
 }
 
+/*모든 버튼의 효과*/
 function backHover(){
 	$(".social-icon a, #home .btn").mouseenter(function(){
 		$(this).css("background","RGB(40, 167, 233)");
@@ -24,6 +25,7 @@ function backHover(){
 	})
 }
 
+/*여수 카페 불투명도 효과*/
 function imgMove(){
 	var imgBlock = $("#team .team-wrapper")
 	$(imgBlock).mouseenter(function(){
@@ -34,6 +36,7 @@ function imgMove(){
 	})
 }
 
+/*스크롤 애니메이션*/ 
 function scrollAnimate(){
 	$(".navbar-default .navbar-nav li a").click(function(){
 		var thisHref = $(this).attr('href')
@@ -44,6 +47,7 @@ function scrollAnimate(){
 
 }
 
+/*여수 티스토리 바운드 효과*/
 function iconMove(){
 	var iconBtn = $(".media .media-object.pull-left");
 	$(iconBtn).mouseenter(function(){
@@ -54,6 +58,7 @@ function iconMove(){
 	}) 
 }
 
+/*여수 시티투어 효과*/
 function imgOver(){
 	var back = $(".col-md-3.col-sm-6.col-xs-12.wow.fadeIn .portfolio-thumb");
 	var colorBack = $(".col-md-3.col-sm-6.col-xs-12.wow.fadeIn .portfolio-thumb .portfolio-overlay");
@@ -65,26 +70,19 @@ function imgOver(){
 	})
 }
 
+/*타이핑 효과_문장 나누기*/
 function splitTxt(){
 	var allText = $(".element .sub-element").text();
 	var text = allText.split("다.");
-	var textReal0 = text[0]+"다.";
-	var textReal1 = text[1]+"다.";
-	var textReal2 = text[2]+"다.";
+	var real0 = text[0]+"다.";
+	var real1 = text[1]+"다.";
+	var real2 = text[2]+"다.";
 	console.log(textReal2);
-	function typingTxt(cont1,cont2,speed){
-		var Otxt = cont1.text();
-		var Ocont = Otxt.split("");
-		var i = 0;
-		function show(){
-			if(i<Ocont.length){
-				cont2.append(Ocont[i]);
-				i++;
-			};
-		};
-		var Otimer = setInterval(show,speed);
-	};
-	typingTxt();
+}
+
+function messageBox(){
+	var rows = $("textarea").val().split("\n").length
+	$("textarea").attr("rows",rows)
 }
 
 
@@ -92,3 +90,4 @@ $(loadFunction)
 .on('mouseenter mouseleave', '#service div.col-md-4', function () {
 	$(this).toggleClass('active')
 })
+.on('dblclick','textarea',messageBox)
